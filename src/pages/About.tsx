@@ -1,17 +1,24 @@
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import eddieImage from "@/assets/eddie-guide.jpg";
+import aboutHero from "@/assets/about-hero.jpg";
 import { Award, MapPin, Heart, Car } from "lucide-react";
 
 const About = () => (
   <Layout>
     {/* Hero */}
-    <section className="section-padding bg-section-alt">
-      <div className="container-narrow mx-auto text-center">
-        <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4">
+    <section className="relative py-20 sm:py-28">
+      <img
+        src={aboutHero}
+        alt="Scottish highlands road with tour vehicle"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-foreground/60" />
+      <div className="container-narrow mx-auto text-center relative z-10">
+        <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4 text-white">
           Meet Your <span className="text-primary">Guide</span>
         </h1>
-        <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+        <p className="text-white/80 max-w-2xl mx-auto text-lg">
           The man behind the wheel — and the stories.
         </p>
       </div>
