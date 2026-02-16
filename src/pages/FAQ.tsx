@@ -7,6 +7,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import { HelpCircle, MessageCircle, MapPin, Clock, Users, CreditCard } from "lucide-react";
+
+const categories = [
+  { icon: MapPin, label: "Planning Your Trip", indices: [0, 1, 2] },
+  { icon: Users, label: "Tour Details", indices: [3, 4, 5] },
+  { icon: Clock, label: "Booking & Policies", indices: [6, 7, 8, 9] },
+];
 
 const faqs = [
   {
@@ -53,6 +60,7 @@ const faqs = [
 
 const FAQ = () => (
   <Layout>
+    {/* Hero */}
     <section className="relative py-20 sm:py-28">
       <img
         src={faqHero}
@@ -70,26 +78,66 @@ const FAQ = () => (
       </div>
     </section>
 
+    {/* FAQ Categories */}
     <section className="section-padding">
-      <div className="container-narrow mx-auto max-w-3xl">
-        <Accordion type="single" collapsible className="space-y-3">
-          {faqs.map((faq, i) => (
-            <AccordionItem key={i} value={`faq-${i}`} className="bg-card border border-border rounded-lg px-6">
-              <AccordionTrigger className="text-left font-heading font-semibold text-base py-5 hover:no-underline">
-                {faq.q}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
-                {faq.a}
-              </AccordionContent>
-            </AccordionItem>
+      <div className="container-narrow mx-auto max-w-4xl">
+        {/* Category quick-links */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-14">
+          {categories.map((cat) => (
+            <div
+              key={cat.label}
+              className="flex items-center gap-3 p-5 rounded-xl bg-section-alt border border-border hover:border-primary/30 transition-colors"
+            >
+              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <cat.icon className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="font-heading font-semibold text-sm">{cat.label}</p>
+                <p className="text-xs text-muted-foreground">{cat.indices.length} questions</p>
+              </div>
+            </div>
           ))}
-        </Accordion>
+        </div>
 
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-4">Still have questions?</p>
+        {/* Grouped Accordions */}
+        {categories.map((cat) => (
+          <div key={cat.label} className="mb-10">
+            <div className="flex items-center gap-2 mb-5">
+              <cat.icon className="w-5 h-5 text-accent" />
+              <h2 className="font-heading text-xl font-bold">{cat.label}</h2>
+            </div>
+            <Accordion type="single" collapsible className="space-y-3">
+              {cat.indices.map((idx) => (
+                <AccordionItem
+                  key={idx}
+                  value={`faq-${idx}`}
+                  className="bg-card border border-border rounded-xl px-6 shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <AccordionTrigger className="text-left font-heading font-semibold text-base py-5 hover:no-underline gap-4">
+                    <span className="flex items-center gap-3">
+                      <HelpCircle className="w-4 h-4 text-primary flex-shrink-0" />
+                      {faqs[idx].q}
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5 pl-7">
+                    {faqs[idx].a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        ))}
+
+        {/* CTA */}
+        <div className="text-center mt-16 p-10 rounded-2xl bg-section-alt border border-border">
+          <MessageCircle className="w-8 h-8 text-primary mx-auto mb-4" />
+          <h3 className="font-heading text-xl font-bold mb-2">Still have questions?</h3>
+          <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+            Eddie is always happy to chat — drop him a message and he'll get back to you personally.
+          </p>
           <Link
             to="/contact"
-            className="inline-flex items-center px-8 py-3 rounded-md bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center px-8 py-3 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors shadow-md"
           >
             Contact Eddie
           </Link>
