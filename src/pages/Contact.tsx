@@ -1,14 +1,20 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import Layout from "@/components/Layout";
 import contactHero from "@/assets/contact-hero.jpg";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 const Contact = () => {
+  const [searchParams] = useSearchParams();
+  const tourName = searchParams.get("tour") || "";
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
-    message: "",
+    subject: tourName ? `Booking Enquiry — ${tourName}` : "",
+    message: tourName
+      ? `Hi Eddie,\n\nI'd like to book the "${tourName}" tour.\n\nPreferred date(s): \nNumber of guests: \n\nPlease let me know availability and any other details.\n\nThank you!`
+      : "",
   });
   const [submitted, setSubmitted] = useState(false);
 
