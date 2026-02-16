@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
+import contactHero from "@/assets/contact-hero.jpg";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 const Contact = () => {
@@ -18,12 +19,18 @@ const Contact = () => {
 
   return (
     <Layout>
-      <section className="section-padding bg-section-alt">
-        <div className="container-narrow mx-auto text-center">
-          <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4">
+      <section className="relative py-20 sm:py-28">
+        <img
+          src={contactHero}
+          alt="Scottish castle ruins on a dramatic coastline"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-foreground/60" />
+        <div className="container-narrow mx-auto text-center relative z-10">
+          <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4 text-white">
             Get in <span className="text-primary">Touch</span>
           </h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-white/80 max-w-2xl mx-auto text-lg">
             Ready to explore Scotland? Have a question about our tours? We'd love to hear from you.
           </p>
         </div>
