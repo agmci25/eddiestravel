@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import { tours } from "@/data/tours";
 import { Clock, Users, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import curatedHero from "@/assets/curated-tours-hero.jpg";
 
 const CuratedTours = () => {
   const dayTours = tours.filter((t) => t.type === "day");
@@ -10,12 +11,20 @@ const CuratedTours = () => {
   return (
     <Layout>
       {/* Header */}
-      <section className="section-padding bg-section-alt">
-        <div className="container-narrow mx-auto text-center">
-          <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4">
-            <span className="text-primary">Curated</span> Tours
+      <section className="relative bg-section-alt overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={curatedHero}
+            alt="Scottish Highlands panoramic landscape"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-foreground/60" />
+        </div>
+        <div className="relative container-narrow mx-auto text-center section-padding py-20 sm:py-28">
+          <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4 text-white">
+            <span className="text-accent">Curated</span> Tours
           </h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-white/80 max-w-2xl mx-auto text-lg">
             Hand-picked itineraries that reveal Scotland's greatest treasures — from ancient battlefields to otherworldly islands.
           </p>
         </div>
