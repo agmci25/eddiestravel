@@ -22,7 +22,7 @@ const Footer = () => (
           </h4>
           <ul className="space-y-2 text-sm text-background/70">
             <li><Link to="/curated-tours" className="hover:text-primary transition-colors">Curated Tours</Link></li>
-            <li><Link to="/customised-tours" className="hover:text-primary transition-colors">Customised Tours</Link></li>
+            <li><Link to="/bespoke-tours" className="hover:text-primary transition-colors">Bespoke Tours</Link></li>
             <li><Link to="/about" className="hover:text-primary transition-colors">About Eddie</Link></li>
             <li><Link to="/faq" className="hover:text-primary transition-colors">FAQs</Link></li>
             <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>

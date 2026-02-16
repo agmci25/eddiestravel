@@ -134,7 +134,7 @@ const Index = () => {
           </p>
           <div className="mt-8">
             <Link
-              to="/customised-tours"
+              to="/bespoke-tours"
               className="inline-flex items-center px-8 py-3 rounded-md bg-accent text-accent-foreground font-semibold text-sm hover:bg-gold-hover transition-colors"
             >
               Design Your Own Tour

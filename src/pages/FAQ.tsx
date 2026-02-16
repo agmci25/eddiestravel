@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     q: "Can I create a custom itinerary?",
-    a: "Absolutely — that's one of Eddie's specialities. Visit the Customised Tours page to share your interests (castles, whisky, hiking, history, wildlife) and preferred dates, and Eddie's team will design a bespoke itinerary just for you.",
+    a: "Absolutely — that's one of Eddie's specialities. Visit the Bespoke Tours page to share your interests (castles, whisky, hiking, history, wildlife) and preferred dates, and Eddie's team will design a bespoke itinerary just for you.",
   },
 ];
 
