@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import faqHero from "@/assets/faq-hero.jpg";
 import {
   Accordion,
   AccordionContent,
@@ -52,12 +53,18 @@ const faqs = [
 
 const FAQ = () => (
   <Layout>
-    <section className="section-padding bg-section-alt">
-      <div className="container-narrow mx-auto text-center">
-        <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4">
+    <section className="relative py-20 sm:py-28">
+      <img
+        src={faqHero}
+        alt="Scottish loch surrounded by mountains"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-foreground/60" />
+      <div className="container-narrow mx-auto text-center relative z-10">
+        <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4 text-white">
           Frequently Asked <span className="text-primary">Questions</span>
         </h1>
-        <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+        <p className="text-white/80 max-w-2xl mx-auto text-lg">
           Everything you need to know before booking your small-group Scotland tour with Eddie.
         </p>
       </div>
