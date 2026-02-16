@@ -63,7 +63,7 @@ const CuratedTours = () => {
                   )}
                   </ul>
                   <Link
-                  to="/contact"
+                  to={`/contact?tour=${encodeURIComponent(tour.title)}`}
                   className="inline-flex items-center px-6 py-2.5 rounded-md bg-accent text-accent-foreground font-medium text-sm hover:bg-gold-hover transition-colors">
 
                     Book This Tour
@@ -108,7 +108,7 @@ const CuratedTours = () => {
                   )}
                   </ul>
                   <Link
-                  to="/contact"
+                  to={`/contact?tour=${encodeURIComponent(tour.title)}`}
                   className="inline-flex items-center px-6 py-2.5 rounded-md bg-accent text-accent-foreground font-medium text-sm hover:bg-gold-hover transition-colors">
 
                     Book This Tour
