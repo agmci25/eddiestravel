@@ -93,7 +93,7 @@ const FAQ = () => (
                 <cat.icon className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <p className="font-heading font-semibold text-sm">{cat.label}</p>
+                <p className="font-semibold text-sm">{cat.label}</p>
                 <p className="text-xs text-muted-foreground">{cat.indices.length} questions</p>
               </div>
             </button>
@@ -105,7 +105,7 @@ const FAQ = () => (
           <div key={cat.label} id={cat.id} className="mb-10 scroll-mt-24">
             <div className="flex items-center gap-2 mb-5">
               <cat.icon className="w-5 h-5 text-accent" />
-              <h2 className="font-heading text-xl font-bold">{cat.label}</h2>
+              <h2 className="text-xl font-bold">{cat.label}</h2>
             </div>
             <Accordion type="single" collapsible className="space-y-3">
               {cat.indices.map((idx) => (
@@ -114,7 +114,7 @@ const FAQ = () => (
                   value={`faq-${idx}`}
                   className="bg-card border border-border rounded-xl px-6 shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <AccordionTrigger className="text-left font-heading font-semibold text-base py-5 hover:no-underline gap-4">
+                  <AccordionTrigger className="text-left font-semibold text-base py-5 hover:no-underline gap-4">
                     <span className="flex items-center gap-3">
                       <HelpCircle className="w-4 h-4 text-primary flex-shrink-0" />
                       {faqs[idx].q}
@@ -132,7 +132,7 @@ const FAQ = () => (
         {/* CTA */}
         <div className="text-center mt-16 p-10 rounded-2xl bg-section-alt border border-border">
           <MessageCircle className="w-8 h-8 text-primary mx-auto mb-4" />
-          <h3 className="font-heading text-xl font-bold mb-2">Still have questions?</h3>
+          <h3 className="text-xl font-bold mb-2">Still have questions?</h3>
           <p className="text-muted-foreground mb-6 max-w-md mx-auto">
             Eddie is always happy to chat — drop him a message and he'll get back to you personally.
           </p>
