@@ -54,7 +54,7 @@ const BespokeTours = () => {
     <Layout>
       {/* Hero */}
       <section
-        className="parallax-section py-28 sm:py-36"
+        className="parallax-section py-20 sm:py-28"
         style={{ backgroundImage: `url(${parallaxImage})` }}
       >
         <div className="parallax-overlay" />
