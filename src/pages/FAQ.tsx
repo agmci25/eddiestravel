@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 import { HelpCircle, MessageCircle, MapPin, Clock, Users, CreditCard } from "lucide-react";
 
 const categories = [
-  { icon: MapPin, label: "Planning Your Trip", indices: [0, 1, 2] },
-  { icon: Users, label: "Tour Details", indices: [3, 4, 5] },
-  { icon: Clock, label: "Booking & Policies", indices: [6, 7, 8, 9] },
+  { icon: MapPin, label: "Planning Your Trip", id: "planning", indices: [0, 1, 2] },
+  { icon: Users, label: "Tour Details", id: "tour-details", indices: [3, 4, 5] },
+  { icon: Clock, label: "Booking & Policies", id: "booking", indices: [6, 7, 8, 9] },
 ];
 
 const faqs = [
@@ -84,9 +84,10 @@ const FAQ = () => (
         {/* Category quick-links */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-14">
           {categories.map((cat) => (
-            <div
+            <button
               key={cat.label}
-              className="flex items-center gap-3 p-5 rounded-xl bg-section-alt border border-border hover:border-primary/30 transition-colors"
+              onClick={() => document.getElementById(cat.id)?.scrollIntoView({ behavior: "smooth", block: "start" })}
+              className="flex items-center gap-3 p-5 rounded-xl bg-section-alt border border-border hover:border-primary/30 transition-colors cursor-pointer text-left"
             >
               <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                 <cat.icon className="w-5 h-5 text-primary" />
@@ -95,13 +96,13 @@ const FAQ = () => (
                 <p className="font-heading font-semibold text-sm">{cat.label}</p>
                 <p className="text-xs text-muted-foreground">{cat.indices.length} questions</p>
               </div>
-            </div>
+            </button>
           ))}
         </div>
 
         {/* Grouped Accordions */}
         {categories.map((cat) => (
-          <div key={cat.label} className="mb-10">
+          <div key={cat.label} id={cat.id} className="mb-10 scroll-mt-24">
             <div className="flex items-center gap-2 mb-5">
               <cat.icon className="w-5 h-5 text-accent" />
               <h2 className="font-heading text-xl font-bold">{cat.label}</h2>
