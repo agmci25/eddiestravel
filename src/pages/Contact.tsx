@@ -60,7 +60,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm font-medium mb-1">Phone</p>
-                    <p className="text-sm text-muted-foreground">Available on request</p>
+                    <a href="tel:07412598775" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                      07412 598775
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -68,8 +70,8 @@ const Contact = () => {
                     <MapPin size={18} />
                   </div>
                   <div>
-                    <p className="text-sm font-medium mb-1">Based in</p>
-                    <p className="text-sm text-muted-foreground">Edinburgh, Scotland</p>
+                    <p className="text-sm font-medium mb-1">Address</p>
+                    <p className="text-sm text-muted-foreground">1-3 Waterloo Place, Edinburgh, EH1 3BG</p>
                   </div>
                 </div>
               </div>

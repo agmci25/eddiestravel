@@ -35,9 +35,10 @@ const Footer = () => (
             Get in Touch
           </h4>
           <p className="text-sm text-background/70 mb-1">info@eddiestravel.co.uk</p>
-          <p className="text-sm text-background/70 mb-4">Edinburgh, Scotland</p>
+          <p className="text-sm text-background/70 mb-1">07412 598775</p>
+          <p className="text-sm text-background/70 mb-4">1-3 Waterloo Place, Edinburgh, EH1 3BG</p>
           <div className="flex gap-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-background/60 hover:text-primary transition-colors">
+            <a href="https://www.facebook.com/p/Eddies-travel-Edin-limited-61553006424412/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-background/60 hover:text-primary transition-colors">
               <Facebook size={20} />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-background/60 hover:text-primary transition-colors">
