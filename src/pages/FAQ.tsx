@@ -15,7 +15,7 @@ const categories = [
   { icon: Clock, label: "Booking & Policies", id: "booking", indices: [6, 7, 8, 9] },
 ];
 
-const faqs = [
+const faqs: { q: string; a: React.ReactNode }[] = [
   {
     q: "When is the best time to visit Scotland?",
     a: "Scotland is beautiful year-round. May to September offers the longest daylight hours and mildest weather, making it ideal for outdoor exploration. Autumn brings dramatic colours, and winter has a magical, moody atmosphere with fewer tourists. Eddie runs tours in every season.",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "How many days should I allow for a Scotland tour?",
-    a: "It depends on your interests. A single day can cover a fantastic amount — Glencoe and Loch Ness, for example. For the islands (Skye, Orkney, Lewis & Harris), three to five days is ideal. Eddie can also design longer itineraries for a deeper exploration.",
+    a: <>It depends on your interests. A single day can cover a fantastic amount — Glencoe and Loch Ness, for example. For the islands (Skye, Orkney, Lewis &amp; Harris), three to five days is ideal. Eddie can also design longer itineraries for a deeper exploration. Browse our <Link to="/curated-tours" className="text-primary hover:underline font-medium">curated tours</Link> for inspiration.</>,
   },
   {
     q: "How many people are in each tour group?",
@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     q: "Do you provide pick-up and drop-off?",
-    a: "Yes! Complimentary door-to-door pick-up and drop-off is included for most central Edinburgh hotels and other convenient meeting points. Just let Eddie know where you're staying when you book.",
+    a: <>Yes! Complimentary door-to-door pick-up and drop-off is included for most central Edinburgh hotels and other convenient meeting points. Just let Eddie know where you're staying when you <Link to="/contact" className="text-primary hover:underline font-medium">book</Link>.</>,
   },
   {
     q: "What's included in the tour price?",
@@ -50,11 +50,11 @@ const faqs = [
   },
   {
     q: "What is the cancellation policy?",
-    a: "Day tours are fully refundable if cancelled more than 24 hours before departure. Multi-day tours require 7 days' notice (for 3-day tours) or 14 days' notice (for 4–5 day tours) for a full refund. Contact Eddie directly for special circumstances.",
+    a: <>Day tours are fully refundable if cancelled more than 24 hours before departure. Multi-day tours require 7 days' notice (for 3-day tours) or 14 days' notice (for 4–5 day tours) for a full refund. <Link to="/contact" className="text-primary hover:underline font-medium">Contact Eddie</Link> directly for special circumstances.</>,
   },
   {
     q: "Can I create a custom itinerary?",
-    a: "Absolutely — that's one of Eddie's specialities. Visit the Bespoke Tours page to share your interests (castles, whisky, hiking, history, wildlife) and preferred dates, and Eddie's team will design a bespoke itinerary just for you.",
+    a: <>Absolutely — that's one of Eddie's specialities. Visit the <Link to="/bespoke-tours" className="text-primary hover:underline font-medium">Bespoke Tours</Link> page to share your interests (castles, whisky, hiking, history, wildlife) and preferred dates, and Eddie's team will design a bespoke itinerary just for you.</>,
   },
 ];
 

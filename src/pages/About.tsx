@@ -46,7 +46,7 @@ const About = () => (
               My tours aren't about ticking boxes — they're about storytelling. Every stop has a tale, every road reveals a secret, and every guest becomes part of the journey. I combine safety, comfort and rich narrative to deliver experiences that linger long after you've returned home.
             </p>
             <p>
-              Whether you're drawn to the mystery of Loch Ness, the wild beauty of Skye or the smoky warmth of an Islay distillery, I'll craft a day — or a week — around what moves you. That's a promise.
+              Whether you're drawn to the mystery of Loch Ness, the wild beauty of Skye or the smoky warmth of an Islay distillery, I'll craft a day — or a week — around what moves you. Explore our <Link to="/curated-tours" className="text-primary hover:underline font-medium">curated tours</Link> or <Link to="/bespoke-tours" className="text-primary hover:underline font-medium">design your own</Link>. That's a promise.
             </p>
           </div>
         </div>

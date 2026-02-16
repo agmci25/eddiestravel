@@ -80,14 +80,16 @@ const Index = () => {
             {[
               { icon: MapPin, title: "Local Expertise", desc: "Born and raised in Scotland, Eddie shares stories and secrets you won't find in any guidebook." },
               { icon: Shield, title: "Small Groups", desc: "Maximum 6–8 guests per tour means personal attention, flexible stops and a relaxed pace." },
-              { icon: Heart, title: "Bespoke Itineraries", desc: "From a single day to a fortnight, every itinerary is crafted around your interests and pace." },
+              { icon: Heart, title: "Bespoke Itineraries", desc: "From a single day to a fortnight, every itinerary is crafted around your interests and pace.", link: "/bespoke-tours" },
               { icon: Star, title: "Premium Comfort", desc: "Travel in a luxury Mercedes minivan with complimentary water and door-to-door pick-up." },
             ].map((item) => (
               <div key={item.title} className="text-center p-6">
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-4">
                   <item.icon size={26} />
                 </div>
-                <h3 className="font-heading text-lg font-semibold mb-2">{item.title}</h3>
+                <h3 className="font-heading text-lg font-semibold mb-2">
+                  {item.link ? <Link to={item.link} className="hover:text-primary transition-colors">{item.title}</Link> : item.title}
+                </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
               </div>
             ))}
