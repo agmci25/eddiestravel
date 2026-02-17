@@ -1,4 +1,4 @@
-import tourGlencoe from "@/assets/tour-glencoe.jpg";
+import tourGlencoe from "@/assets/tour-glencoe.webp";
 import tourLochness from "@/assets/tour-lochness.jpg";
 import tourSkye from "@/assets/tour-skye.webp";
 import tourStirling from "@/assets/tour-stirling.jpg";
