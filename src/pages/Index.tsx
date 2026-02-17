@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import TourCard from "@/components/TourCard";
 import { tours } from "@/data/tours";
-import heroImage from "@/assets/hero-scotland.jpg";
+import heroImage from "@/assets/hero-scotland.webp";
 import parallaxImage from "@/assets/parallax-scotland.jpg";
 import vclassVehicle from "@/assets/vclass-vehicle.webp";
 import { MapPin, Shield, Heart, Star } from "lucide-react";
