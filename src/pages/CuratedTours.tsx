@@ -3,7 +3,7 @@ import { tours } from "@/data/tours";
 import { Clock, Users, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import curatedHero from "@/assets/curated-tours-hero.jpg";
-import vclassVehicle from "@/assets/vclass-vehicle.webp";
+import eddieWithCar from "@/assets/eddie-with-car.webp";
 
 const CuratedTours = () => {
   const dayTours = tours.filter((t) => t.type === "day");
@@ -127,8 +127,8 @@ const CuratedTours = () => {
           <h2 className="font-heading text-2xl font-bold text-center mb-8">What's Included</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <img
-              src={vclassVehicle}
-              alt="Premium Mercedes V-Class minivan used on all Eddie's Travel tours"
+              src={eddieWithCar}
+              alt="Eddie standing beside his Mercedes V-Class fleet"
               className="rounded-lg w-full object-cover aspect-[16/9]"
               loading="lazy"
             />

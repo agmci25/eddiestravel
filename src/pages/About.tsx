@@ -28,16 +28,11 @@ const About = () => (
     {/* Eddie's Story */}
     <section className="section-padding">
       <div className="container-narrow mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div className="space-y-6">
+        <div>
           <img
             src={eddieImage}
             alt="Eddie, your Scottish tour guide"
             className="rounded-lg w-full object-cover aspect-[4/3]"
-          />
-          <img
-            src={eddieWithCar}
-            alt="Eddie standing proudly beside his Mercedes V-Class fleet"
-            className="rounded-lg w-full object-cover aspect-[16/9]"
           />
         </div>
         <div>
