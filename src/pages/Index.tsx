@@ -4,6 +4,7 @@ import TourCard from "@/components/TourCard";
 import { tours } from "@/data/tours";
 import heroImage from "@/assets/hero-scotland.jpg";
 import parallaxImage from "@/assets/parallax-scotland.jpg";
+import vclassVehicle from "@/assets/vclass-vehicle.webp";
 import { MapPin, Shield, Heart, Star } from "lucide-react";
 
 const testimonials = [
@@ -119,6 +120,31 @@ const Index = () => {
               className="inline-flex items-center px-8 py-3 rounded-md bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors"
             >
               View All Tours
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Travel in Style */}
+      <section className="section-padding bg-section-alt">
+        <div className="container-narrow mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <img
+            src={vclassVehicle}
+            alt="Premium Mercedes V-Class used on Eddie's Travel tours"
+            className="rounded-lg w-full object-cover aspect-[16/9]"
+          />
+          <div>
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
+              Travel in <span className="text-primary">Style</span>
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Every journey is made in a premium Mercedes V-Class or Vito Tourer — spacious, comfortable and immaculately maintained. With room for up to 8 guests, complimentary bottled water and door-to-door pick-up, you'll travel Scotland the way it deserves to be explored.
+            </p>
+            <Link
+              to="/curated-tours"
+              className="inline-flex items-center px-6 py-2.5 rounded-md bg-accent text-accent-foreground font-medium text-sm hover:bg-gold-hover transition-colors"
+            >
+              Explore Our Tours →
             </Link>
           </div>
         </div>
