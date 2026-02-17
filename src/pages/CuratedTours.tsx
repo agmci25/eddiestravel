@@ -3,6 +3,7 @@ import { tours } from "@/data/tours";
 import { Clock, Users, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import curatedHero from "@/assets/curated-tours-hero.jpg";
+import vclassVehicle from "@/assets/vclass-vehicle.webp";
 
 const CuratedTours = () => {
   const dayTours = tours.filter((t) => t.type === "day");
@@ -122,22 +123,30 @@ const CuratedTours = () => {
 
       {/* Inclusions */}
       <section className="section-padding">
-        <div className="container-narrow mx-auto max-w-3xl">
+        <div className="container-narrow mx-auto max-w-4xl">
           <h2 className="font-heading text-2xl font-bold text-center mb-8">What's Included</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-            "Door-to-door pick-up & drop-off",
-            "Premium Mercedes minivan transport",
-            "Expert driver-guide (Eddie!)",
-            "Complimentary bottled Scottish water",
-            "Flexible photo stops",
-            "Personalised small-group attention"].
-            map((item) =>
-            <div key={item} className="flex items-center gap-3 bg-section-alt rounded-md p-4">
-                <CheckCircle size={18} className="text-primary shrink-0" />
-                <span className="text-sm">{item}</span>
-              </div>
-            )}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <img
+              src={vclassVehicle}
+              alt="Premium Mercedes V-Class minivan used on all Eddie's Travel tours"
+              className="rounded-lg w-full object-cover aspect-[16/9]"
+              loading="lazy"
+            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+              "Door-to-door pick-up & drop-off",
+              "Premium Mercedes minivan transport",
+              "Expert driver-guide (Eddie!)",
+              "Complimentary bottled Scottish water",
+              "Flexible photo stops",
+              "Personalised small-group attention"].
+              map((item) =>
+              <div key={item} className="flex items-center gap-3 bg-section-alt rounded-md p-4">
+                  <CheckCircle size={18} className="text-primary shrink-0" />
+                  <span className="text-sm">{item}</span>
+                </div>
+              )}
+            </div>
           </div>
           <p className="text-xs text-muted-foreground text-center mt-6">
             Accommodation, entrance fees, ferries, trains, flights and meals are not included unless otherwise stated.

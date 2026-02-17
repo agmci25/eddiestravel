@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import eddieImage from "@/assets/eddie-guide.jpg";
+import eddieWithCar from "@/assets/eddie-with-car.webp";
 import aboutHero from "@/assets/about-hero.jpg";
 import { Award, MapPin, Heart, Car } from "lucide-react";
 
@@ -27,11 +28,16 @@ const About = () => (
     {/* Eddie's Story */}
     <section className="section-padding">
       <div className="container-narrow mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
+        <div className="space-y-6">
           <img
             src={eddieImage}
-            alt="Eddie, your Scottish tour guide, standing beside his premium Mercedes minivan"
+            alt="Eddie, your Scottish tour guide"
             className="rounded-lg w-full object-cover aspect-[4/3]"
+          />
+          <img
+            src={eddieWithCar}
+            alt="Eddie standing proudly beside his Mercedes V-Class fleet"
+            className="rounded-lg w-full object-cover aspect-[16/9]"
           />
         </div>
         <div>
