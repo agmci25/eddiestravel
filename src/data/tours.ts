@@ -1,6 +1,6 @@
 import tourGlencoe from "@/assets/tour-glencoe.jpg";
 import tourLochness from "@/assets/tour-lochness.jpg";
-import tourSkye from "@/assets/tour-skye.jpg";
+import tourSkye from "@/assets/tour-skye.webp";
 import tourStirling from "@/assets/tour-stirling.jpg";
 import tourOrkney from "@/assets/tour-orkney.jpg";
 import tourIslay from "@/assets/tour-islay.jpg";
