@@ -3,7 +3,7 @@ import tourLochness from "@/assets/tour-lochness.jpg";
 import tourSkye from "@/assets/tour-skye.webp";
 import tourStirling from "@/assets/tour-stirling.jpg";
 import tourOrkney from "@/assets/tour-orkney.webp";
-import tourIslay from "@/assets/tour-islay.jpg";
+import tourIslay from "@/assets/tour-islay.webp";
 import tourLewis from "@/assets/tour-lewis.jpg";
 
 export interface Tour {
