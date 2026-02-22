@@ -8,6 +8,7 @@ const navLinks = [
   { to: "/bespoke-tours", label: "Bespoke Tours" },
   { to: "/about", label: "About" },
   { to: "/faq", label: "FAQs" },
+  { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];
 
