@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import faqHero from "@/assets/faq-hero.jpg";
 import { Link } from "react-router-dom";
 import { MessageCircle, MapPin, Users, Clock } from "lucide-react";
@@ -68,6 +69,10 @@ const FAQ = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Scotland Tour FAQ | Booking, Itineraries & Travel Tips"
+        description="Find answers about Eddie's Travel Scotland tours — booking policies, group sizes, pick-up details, best time to visit Scotland, cancellation terms and custom itinerary options."
+      />
       {/* Hero */}
       <section className="relative py-20 sm:py-28">
         <img
@@ -78,7 +83,7 @@ const FAQ = () => {
         <div className="absolute inset-0 bg-foreground/60" />
         <div className="container-narrow mx-auto text-center relative z-10">
           <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4 text-white">
-            Frequently Asked <span className="text-primary">Questions</span>
+            Scotland Tour <span className="text-primary">FAQ</span>
           </h1>
           <p className="text-white/80 max-w-2xl mx-auto text-lg">
             Everything you need to know before booking your small-group Scotland tour with Eddie.

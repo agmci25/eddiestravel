@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import eddieImage from "@/assets/eddie-guide.jpg";
 import eddieWithCar from "@/assets/eddie-with-car.webp";
@@ -7,6 +8,10 @@ import { Award, MapPin, Heart, Car } from "lucide-react";
 
 const About = () => (
   <Layout>
+    <SEO
+      title="About Eddie's Travel | Your Local Scottish Tour Guide"
+      description="Meet Eddie — a licensed professional driver-guide and Scotland expert. Learn why travellers choose Eddie's Travel for personal, small-group tours across the Scottish Highlands and islands."
+    />
     {/* Hero */}
     <section className="relative py-20 sm:py-28">
       <img
@@ -16,9 +21,9 @@ const About = () => (
       />
       <div className="absolute inset-0 bg-foreground/60" />
       <div className="container-narrow mx-auto text-center relative z-10">
-        <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4 text-white">
-          Meet Your <span className="text-primary">Guide</span>
-        </h1>
+          <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4 text-white">
+            Meet Your <span className="text-primary">Scottish Tour Guide</span>
+          </h1>
         <p className="text-white/80 max-w-2xl mx-auto text-lg">
           The man behind the wheel — and the stories.
         </p>

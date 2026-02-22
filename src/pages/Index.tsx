@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import TourCard from "@/components/TourCard";
 import { tours } from "@/data/tours";
 import heroImage from "@/assets/hero-scotland.webp";
@@ -30,6 +31,10 @@ const Index = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Eddie's Travel Scotland | Small-Group Tours & Bespoke Scottish Experiences"
+        description="Explore Scotland with Eddie's Travel. Private small-group tours through the Highlands, Isle of Skye, Loch Ness, Orkney and beyond. Personal guide, luxury Mercedes transport, door-to-door service from Edinburgh."
+      />
       {/* Hero */}
       <section className="relative h-[85vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <img

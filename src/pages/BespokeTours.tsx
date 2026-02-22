@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { User, Calendar, Sparkles, Compass, Star, Wifi, Car, Droplets, UserCheck } from "lucide-react";
 import parallaxImage from "@/assets/parallax-scotland.jpg";
@@ -52,6 +53,10 @@ const BespokeTours = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Bespoke Scotland Tours | Custom Private Scottish Itineraries"
+        description="Design your own private Scotland tour with Eddie's Travel. Personalised itineraries covering the Highlands, islands, castles, whisky distilleries and more. Luxury Mercedes transport, expert local guide."
+      />
       {/* Hero */}
       <section
         className="parallax-section py-20 sm:py-28"
@@ -63,7 +68,7 @@ const BespokeTours = () => {
 
 
           <h1 className="font-heading text-4xl sm:text-5xl font-bold text-primary-foreground mb-4">
-            <span className="text-primary">Bespoke</span> Tours
+            <span className="text-primary">Bespoke</span> Scotland Tours
           </h1>
           <p className="text-primary-foreground/80 text-lg max-w-xl mx-auto">
             Craft incomparable travel itineraries and make lifelong memories.
@@ -75,7 +80,7 @@ const BespokeTours = () => {
       <section className="section-padding">
         <div className="container-narrow mx-auto max-w-3xl text-center">
           <h2 className="font-heading text-3xl font-bold mb-6">
-            Unforgettable <span className="text-primary">Travel Experiences</span>
+            Unforgettable Private <span className="text-primary">Scottish Experiences</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-8">
             When it's your first time visiting Scotland, it's hard to know exactly what to see, so knowing what you're interested in helps us help you! Do you like castles, whisky, history, culture, beautiful scenery? Contact us directly or check out our expertly curated tours for inspiration.
@@ -102,7 +107,7 @@ const BespokeTours = () => {
         <div className="container-narrow mx-auto">
           <div className="text-center mb-14">
             <h2 className="font-heading text-3xl font-bold mb-4">
-              Why Should You Pick a <span className="text-primary">Private Tour</span>?
+              Why Choose a <span className="text-primary">Private Scotland Tour</span>?
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">

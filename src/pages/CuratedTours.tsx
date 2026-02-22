@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { tours } from "@/data/tours";
 import { Clock, Users, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -11,6 +12,10 @@ const CuratedTours = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Curated Scotland Tours | Day Trips & Multi-Day Highland Adventures"
+        description="Browse Eddie's hand-picked small-group Scotland tours. Day trips from Edinburgh to Glencoe, Loch Ness and Stirling, plus multi-day adventures to Skye, Orkney, Islay and the Outer Hebrides."
+      />
       {/* Header */}
       <section className="relative bg-section-alt overflow-hidden">
         <div className="absolute inset-0">
@@ -23,10 +28,10 @@ const CuratedTours = () => {
         </div>
         <div className="relative container-narrow mx-auto text-center section-padding py-20 sm:py-28">
           <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4 text-white">
-            <span className="text-primary">Curated</span> Tours
+            <span className="text-primary">Curated</span> Scotland Tours
           </h1>
           <p className="text-white/80 max-w-2xl mx-auto text-lg">
-            Hand-picked itineraries that reveal Scotland's greatest treasures — from ancient battlefields to otherworldly islands.
+            Hand-picked small-group itineraries that reveal Scotland's greatest treasures — from ancient battlefields to otherworldly islands.
           </p>
         </div>
       </section>
@@ -35,7 +40,7 @@ const CuratedTours = () => {
       <section className="section-padding">
         <div className="container-narrow mx-auto">
           <h2 className="font-heading text-2xl sm:text-3xl font-bold mb-10">
-            Day Tours <span className="text-muted-foreground font-body text-lg font-normal">from Edinburgh</span>
+            Scotland Day Tours <span className="text-muted-foreground font-body text-lg font-normal">from Edinburgh</span>
           </h2>
           <div className="space-y-16">
             {dayTours.map((tour) =>
@@ -80,7 +85,7 @@ const CuratedTours = () => {
       <section className="section-padding bg-section-alt">
         <div className="container-narrow mx-auto">
           <h2 className="font-heading text-2xl sm:text-3xl font-bold mb-10">
-            Multi-Day Adventures
+            Multi-Day Scottish Adventures
           </h2>
           <div className="space-y-16">
             {multiTours.map((tour) =>
