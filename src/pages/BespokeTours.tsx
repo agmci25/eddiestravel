@@ -59,7 +59,7 @@ const BespokeTours = () => {
       />
       {/* Hero */}
       <section
-        className="parallax-section py-20 sm:py-28"
+        className="parallax-section py-20 sm:py-28 min-h-[280px] sm:min-h-[340px] flex items-center"
         style={{ backgroundImage: `url(${parallaxImage})` }}>
 
         <div className="parallax-overlay" />
