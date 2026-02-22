@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import contactHero from "@/assets/contact-hero.jpg";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 
@@ -25,6 +26,10 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Contact Eddie's Travel | Book Your Scotland Tour Today"
+        description="Get in touch with Eddie's Travel to book a small-group Scotland tour or request a bespoke itinerary. Email, phone or use our contact form — we reply within 24 hours."
+      />
       <section className="relative py-20 sm:py-28">
         <img
           src={contactHero}
@@ -34,7 +39,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-foreground/60" />
         <div className="container-narrow mx-auto text-center relative z-10">
           <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4 text-white">
-            Get in <span className="text-primary">Touch</span>
+            Book Your <span className="text-primary">Scotland Tour</span>
           </h1>
           <p className="text-white/80 max-w-2xl mx-auto text-lg">
             Ready to explore Scotland? Have a question about our tours? We'd love to hear from you.
