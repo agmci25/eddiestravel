@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import { supabase } from "@/integrations/supabase/client";
 import { Calendar } from "lucide-react";
 import { format } from "date-fns";
+import blogHero from "@/assets/blog-hero.jpg";
 
 interface BlogPost {
   id: string;
@@ -44,12 +45,18 @@ const Blog = () => {
       />
 
       {/* Hero */}
-      <section className="bg-primary py-16 sm:py-20">
-        <div className="container-narrow mx-auto text-center px-4">
-          <h1 className="font-heading text-4xl sm:text-5xl font-bold text-primary-foreground mb-4">
-            Scottish <span className="text-accent">Travel</span> Blog
+      <section className="relative py-20 sm:py-28">
+        <img
+          src={blogHero}
+          alt="Scottish highlands with heather and loch"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-foreground/60" />
+        <div className="container-narrow mx-auto text-center relative z-10">
+          <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4 text-white">
+            Scottish <span className="text-primary">Travel</span> Blog
           </h1>
-          <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg">
+          <p className="text-white/80 max-w-2xl mx-auto text-lg">
             Insider tips, hidden gems and stories from the road — straight from your guide Eddie.
           </p>
         </div>
