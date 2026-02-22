@@ -34,7 +34,7 @@ const Footer = () => (
           <h4 className="font-heading text-sm font-semibold uppercase tracking-wider mb-4 text-background/80">
             Get in Touch
           </h4>
-          <p className="text-sm text-background/70 mb-1">info@eddiestravel.co.uk</p>
+          <p className="text-sm text-background/70 mb-1">eddiestravel@outlook.com</p>
           <p className="text-sm text-background/70 mb-1">07412 598775</p>
           <p className="text-sm text-background/70 mb-4">1-3 Waterloo Place, Edinburgh, EH1 3BG</p>
           <div className="flex gap-4">
