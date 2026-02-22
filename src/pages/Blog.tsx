@@ -5,7 +5,7 @@ import SEO from "@/components/SEO";
 import { supabase } from "@/integrations/supabase/client";
 import { Calendar } from "lucide-react";
 import { format } from "date-fns";
-import blogHero from "@/assets/blog-hero.jpg";
+import blogHero from "@/assets/blog-hero.webp";
 
 interface BlogPost {
   id: string;
