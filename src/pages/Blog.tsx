@@ -45,7 +45,7 @@ const Blog = () => {
       />
 
       {/* Hero */}
-      <section className="relative py-20 sm:py-28">
+      <section className="relative py-20 sm:py-28 min-h-[280px] sm:min-h-[340px] flex items-center">
         <img
           src={blogHero}
           alt="Scottish highlands with heather and loch"

@@ -17,7 +17,7 @@ const CuratedTours = () => {
         description="Browse Eddie's hand-picked small-group Scotland tours. Day trips from Edinburgh to Glencoe, Loch Ness and Stirling, plus multi-day adventures to Skye, Orkney, Islay and the Outer Hebrides."
       />
       {/* Header */}
-      <section className="relative bg-section-alt overflow-hidden">
+      <section className="relative bg-section-alt overflow-hidden min-h-[280px] sm:min-h-[340px] flex items-center">
         <div className="absolute inset-0">
           <img
             src={curatedHero}
@@ -26,7 +26,7 @@ const CuratedTours = () => {
 
           <div className="absolute inset-0 bg-foreground/60" />
         </div>
-        <div className="relative container-narrow mx-auto text-center section-padding py-20 sm:py-28">
+        <div className="relative container-narrow mx-auto text-center py-20 sm:py-28 px-4">
           <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4 text-white">
             <span className="text-primary">Curated</span> Scotland Tours
           </h1>

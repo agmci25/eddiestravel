@@ -13,7 +13,7 @@ const About = () => (
       description="Meet Eddie — a licensed professional driver-guide and Scotland expert. Learn why travellers choose Eddie's Travel for personal, small-group tours across the Scottish Highlands and islands."
     />
     {/* Hero */}
-    <section className="relative py-20 sm:py-28">
+    <section className="relative py-20 sm:py-28 min-h-[280px] sm:min-h-[340px] flex items-center">
       <img
         src={aboutHero}
         alt="Scottish highlands road with tour vehicle"

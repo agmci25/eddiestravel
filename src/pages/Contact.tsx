@@ -30,7 +30,7 @@ const Contact = () => {
         title="Contact Eddie's Travel | Book Your Scotland Tour Today"
         description="Get in touch with Eddie's Travel to book a small-group Scotland tour or request a bespoke itinerary. Email, phone or use our contact form — we reply within 24 hours."
       />
-      <section className="relative py-20 sm:py-28">
+      <section className="relative py-20 sm:py-28 min-h-[280px] sm:min-h-[340px] flex items-center">
         <img
           src={contactHero}
           alt="Scottish castle ruins on a dramatic coastline"
