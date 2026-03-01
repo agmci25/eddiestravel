@@ -10,6 +10,14 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Pencil, Trash2, Plus, LogOut, ImagePlus, Eye, EyeOff } from "lucide-react";
 import type { User } from "@supabase/supabase-js";
+import { z } from "zod";
+
+const BlogPostSchema = z.object({
+  title: z.string().trim().min(1, "Title is required").max(200, "Title must be under 200 characters"),
+  excerpt: z.string().trim().max(500, "Excerpt must be under 500 characters").optional().or(z.literal("")),
+  content: z.string().trim().min(1, "Content is required").max(50000, "Content must be under 50,000 characters"),
+  cover_image_url: z.string().url("Invalid image URL").max(2000).optional().or(z.literal("")),
+});
 
 interface BlogPost {
   id: string;
@@ -30,6 +38,7 @@ const generateSlug = (title: string) =>
 
 const BlogAdmin = () => {
   const [user, setUser] = useState<User | null>(null);
+  const [authLoading, setAuthLoading] = useState(true);
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [editing, setEditing] = useState<BlogPost | null>(null);
   const [isNew, setIsNew] = useState(false);
@@ -47,10 +56,12 @@ const BlogAdmin = () => {
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user ?? null);
+      setAuthLoading(false);
       if (!session?.user) navigate("/admin");
     });
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session?.user ?? null);
+      setAuthLoading(false);
       if (!session?.user) navigate("/admin");
     });
     return () => subscription.unsubscribe();
@@ -120,18 +131,25 @@ const BlogAdmin = () => {
   };
 
   const handleSave = async () => {
-    if (!title.trim() || !content.trim()) {
-      toast({ title: "Title and content are required", variant: "destructive" });
+    const result = BlogPostSchema.safeParse({
+      title,
+      excerpt: excerpt || undefined,
+      content,
+      cover_image_url: coverUrl || undefined,
+    });
+    if (!result.success) {
+      const firstError = result.error.errors[0]?.message || "Validation failed";
+      toast({ title: firstError, variant: "destructive" });
       return;
     }
     setSaving(true);
-    const slug = generateSlug(title);
+    const slug = generateSlug(result.data.title);
     const payload = {
-      title: title.trim(),
+      title: result.data.title,
       slug,
-      excerpt: excerpt.trim() || null,
-      content: content.trim(),
-      cover_image_url: coverUrl || null,
+      excerpt: result.data.excerpt || null,
+      content: result.data.content,
+      cover_image_url: result.data.cover_image_url || null,
       published,
       author_id: user!.id,
     };
@@ -167,7 +185,7 @@ const BlogAdmin = () => {
     navigate("/admin");
   };
 
-  if (!user) return null;
+  if (authLoading || !user) return null;
 
   const showForm = isNew || editing;
 
