@@ -1,10 +1,11 @@
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { tours } from "@/data/tours";
-import { Clock, Users, CheckCircle } from "lucide-react";
+import { Clock, Users, CheckCircle, AlertTriangle, Car, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import curatedHero from "@/assets/curated-tours-hero.jpg";
 import eddieWithCar from "@/assets/eddie-with-car.webp";
+import vclassVehicle from "@/assets/vclass-vehicle.webp";
 
 const CuratedTours = () => {
   const dayTours = tours.filter((t) => t.type === "day");
@@ -58,6 +59,7 @@ const CuratedTours = () => {
                     <span className="flex items-center gap-1"><Users size={15} /> {tour.vehicle}</span>
                     <span className="font-heading text-lg font-bold text-primary">{tour.price}</span>
                   </div>
+                  <p className="text-xs text-muted-foreground mb-4">Guests' accommodation is not included in the tour price.</p>
                   <p className="text-muted-foreground mb-5 leading-relaxed">{tour.shortDescription}</p>
                   <h4 className="font-heading text-sm font-semibold uppercase tracking-wider mb-3">Highlights</h4>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
@@ -103,6 +105,23 @@ const CuratedTours = () => {
                     <span className="flex items-center gap-1"><Users size={15} /> {tour.vehicle}</span>
                     <span className="font-heading text-lg font-bold text-primary">{tour.price}</span>
                   </div>
+                  <p className="text-xs text-muted-foreground mb-2">Guests' accommodation is not included in the tour price.</p>
+                  {tour.requiresFerry && (
+                    <div className="flex items-start gap-2 bg-accent/10 border border-accent/30 rounded-md p-3 mb-4">
+                      <AlertTriangle size={16} className="text-accent mt-0.5 shrink-0" />
+                      <p className="text-sm text-foreground">Ferry tickets are not included and will be charged in addition to the tour price.</p>
+                    </div>
+                  )}
+                  {tour.slug === "isle-of-skye" && (
+                    <div className="flex items-start gap-2 bg-primary/5 border border-primary/20 rounded-md p-3 mb-4">
+                      <MapPin size={16} className="text-primary mt-0.5 shrink-0" />
+                      <div className="text-sm text-muted-foreground">
+                        <p className="font-medium text-foreground mb-1">Accommodation on Skye can be very limited. We recommend staying in:</p>
+                        <p className="mb-1">Portree · Broadford · Kyleakin</p>
+                        <p>Alternatively: Kyle of Lochalsh · Dornie · Plockton</p>
+                      </div>
+                    </div>
+                  )}
                   <p className="text-muted-foreground mb-5 leading-relaxed">{tour.shortDescription}</p>
                   <h4 className="font-heading text-sm font-semibold uppercase tracking-wider mb-3">Highlights</h4>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
@@ -122,6 +141,39 @@ const CuratedTours = () => {
                 </div>
               </article>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Vehicle */}
+      <section className="section-padding">
+        <div className="container-narrow mx-auto max-w-4xl">
+          <h2 className="font-heading text-2xl font-bold text-center mb-8">Our Vehicle</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <img
+              src={vclassVehicle}
+              alt="Mercedes V-Class touring vehicle"
+              className="rounded-lg w-full object-cover aspect-[16/9]"
+              loading="lazy"
+            />
+            <div className="space-y-4">
+              <p className="text-muted-foreground leading-relaxed">
+                All tours operate in a <strong className="text-foreground">Mercedes V-Class</strong> or equivalent premium people carrier, ensuring a comfortable and stylish journey throughout Scotland.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <CheckCircle size={16} className="text-primary mt-0.5 shrink-0" />
+                  Maximum of 6 passengers per vehicle
+                </li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <CheckCircle size={16} className="text-primary mt-0.5 shrink-0" />
+                  Spacious, air-conditioned and immaculately maintained
+                </li>
+              </ul>
+              <p className="text-sm text-muted-foreground">
+                If a larger vehicle is required, a 16-seat minibus can be provided. Minibus pricing will be quoted separately — please <a href="/contact" className="text-primary hover:underline">get in touch</a> for details.
+              </p>
+            </div>
           </div>
         </div>
       </section>
