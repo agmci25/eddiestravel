@@ -16,6 +16,8 @@ export interface Tour {
   shortDescription: string;
   highlights: string[];
   type: "day" | "multi";
+  requiresFerry?: boolean;
+  nights?: number;
 }
 
 export const tours: Tour[] = [
@@ -23,7 +25,7 @@ export const tours: Tour[] = [
     slug: "dunfermline-stirling-rosslyn",
     title: "Dunfermline Abbey, Stirling Castle & Rosslyn Chapel",
     duration: "1 Day (10 hours)",
-    price: "£580",
+    price: "£695",
     vehicle: "6-seater Mercedes V-Class",
     image: tourStirling,
     shortDescription:
@@ -41,7 +43,7 @@ export const tours: Tour[] = [
     slug: "glencoe-loch-ness",
     title: "Glencoe & Loch Ness",
     duration: "1 Day (12.5 hours)",
-    price: "£820",
+    price: "£890",
     vehicle: "6-seater Mercedes V-Class",
     image: tourGlencoe,
     shortDescription:
@@ -59,7 +61,7 @@ export const tours: Tour[] = [
     slug: "loch-lomond-stirling-kelpies",
     title: "Loch Lomond, Stirling Castle & The Kelpies",
     duration: "1 Day (10 hours)",
-    price: "£595",
+    price: "£695",
     vehicle: "6-seater Mercedes V-Class",
     image: tourLochness,
     shortDescription:
@@ -75,9 +77,10 @@ export const tours: Tour[] = [
   {
     slug: "isle-of-skye",
     title: "Isle of Skye",
-    duration: "3 Days",
-    price: "From £695 pp",
-    vehicle: "8-seater Mercedes Vito Tourer",
+    duration: "3 Days / 2 Nights",
+    price: "£2,385 (£695/day + £150/night × 2)",
+    vehicle: "6-seater Mercedes V-Class",
+    nights: 2,
     image: tourSkye,
     shortDescription:
       "Three days exploring Skye's otherworldly landscapes — Trotternish Peninsula, Kilt Rock, Old Man of Storr and the Quiraing — with journeys through Glencoe, over the Skye Bridge and back via Eilean Donan Castle.",
@@ -94,9 +97,11 @@ export const tours: Tour[] = [
   {
     slug: "islay-tour",
     title: "Islay Whisky & Landscapes",
-    duration: "4 Days",
-    price: "From £695 pp",
-    vehicle: "8-seater Mercedes Vito",
+    duration: "4 Days / 3 Nights",
+    price: "£3,230 (£695/day + £150/night × 3)",
+    vehicle: "6-seater Mercedes V-Class",
+    nights: 3,
+    requiresFerry: true,
     image: tourIslay,
     shortDescription:
       "Combine dramatic Highland scenery with the smoky whisky culture of Islay. Visit Lagavulin, Ardbeg and Laphroaig distilleries, explore Kilmartin Glen's Neolithic sites and enjoy coastal walks around Bowmore.",
@@ -113,9 +118,11 @@ export const tours: Tour[] = [
   {
     slug: "orkney-exquisite",
     title: "Orkney Exquisite",
-    duration: "5 Days",
-    price: "From £625 pp",
-    vehicle: "8-seater Mercedes Vito",
+    duration: "5 Days / 4 Nights",
+    price: "£4,075 (£695/day + £150/night × 4)",
+    vehicle: "6-seater Mercedes V-Class",
+    nights: 4,
+    requiresFerry: true,
     image: tourOrkney,
     shortDescription:
       "An epic journey from the Highlands to the ancient Orkney Isles. Explore Skara Brae, the Ring o' Brodgar, Italian Chapel and Churchill Barriers, then return past Dunrobin Castle and through the Cairngorms.",
@@ -132,9 +139,11 @@ export const tours: Tour[] = [
   {
     slug: "lewis-harris",
     title: "Lewis & Harris",
-    duration: "5 Days",
-    price: "From £695 pp",
-    vehicle: "8-seater Mercedes Vito",
+    duration: "5 Days / 4 Nights",
+    price: "£4,075 (£695/day + £150/night × 4)",
+    vehicle: "6-seater Mercedes V-Class",
+    nights: 4,
+    requiresFerry: true,
     image: tourLewis,
     shortDescription:
       "Venture to the Outer Hebrides — the Callanish Standing Stones, Luskentyre Beach and Arnol Blackhouse — with Highland stops at Glencoe, a Loch Ness cruise, Culloden and whisky tasting in the Cairngorms.",
