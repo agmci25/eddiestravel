@@ -6,6 +6,8 @@ import { tours } from "@/data/tours";
 import heroImage from "@/assets/hero-scotland.webp";
 import parallaxImage from "@/assets/parallax-scotland.jpg";
 import vclassVehicle from "@/assets/vclass-vehicle.webp";
+import guestsGroup from "@/assets/guests-happy-group.png";
+import guestsSelfie from "@/assets/guests-selfie.png";
 import { MapPin, Shield, Heart, Star } from "lucide-react";
 
 const testimonials = [
@@ -186,6 +188,20 @@ const Index = () => {
             <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
               What Our <span className="text-primary">Guests</span> Say
             </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+            <img
+              src={guestsGroup}
+              alt="Happy tour guests enjoying the Scottish Highlands"
+              className="rounded-lg w-full object-cover aspect-[4/3]"
+              loading="lazy"
+            />
+            <img
+              src={guestsSelfie}
+              alt="Tour guests taking a selfie on a Scottish adventure"
+              className="rounded-lg w-full object-cover aspect-[4/3]"
+              loading="lazy"
+            />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((t) => (
