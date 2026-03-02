@@ -72,6 +72,7 @@ const FAQ = () => {
       <SEO
         title="Scotland Tour FAQ | Booking, Itineraries & Travel Tips"
         description="Find answers about Eddie's Travel Scotland tours — booking policies, group sizes, pick-up details, best time to visit Scotland, cancellation terms and custom itinerary options."
+        canonical="https://eddiestravel.lovable.app/faq"
       />
       {/* Hero */}
       <section className="relative py-20 sm:py-28 min-h-[280px] sm:min-h-[340px] flex items-center">

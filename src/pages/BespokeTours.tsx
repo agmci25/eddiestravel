@@ -56,6 +56,7 @@ const BespokeTours = () => {
       <SEO
         title="Bespoke Scotland Tours | Custom Private Scottish Itineraries"
         description="Design your own private Scotland tour with Eddie's Travel. Personalised itineraries covering the Highlands, islands, castles, whisky distilleries and more. Luxury Mercedes transport, expert local guide."
+        canonical="https://eddiestravel.lovable.app/bespoke-tours"
       />
       {/* Hero */}
       <section
