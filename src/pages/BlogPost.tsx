@@ -86,6 +86,8 @@ const BlogPost = () => {
       <SEO
         title={`${post.title} | Eddie's Travel Scotland Blog`}
         description={post.excerpt || post.content.substring(0, 155)}
+        canonical={`https://eddiestravel.lovable.app/blog/${post.slug}`}
+        ogType="article"
       />
 
       <article className="section-padding">

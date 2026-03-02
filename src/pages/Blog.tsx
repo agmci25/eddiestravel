@@ -42,6 +42,7 @@ const Blog = () => {
       <SEO
         title="Scottish Travel Blog | Tips, Stories & Hidden Gems | Eddie's Travel"
         description="Read Eddie's latest Scottish travel articles — insider tips, hidden gems, local events and destination guides to help you plan the perfect Scotland trip."
+        canonical="https://eddiestravel.lovable.app/blog"
       />
 
       {/* Hero */}

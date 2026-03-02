@@ -11,6 +11,7 @@ const About = () => (
     <SEO
       title="About Eddie's Travel | Your Local Scottish Tour Guide"
       description="Meet Eddie — a licensed professional driver-guide and Scotland expert. Learn why travellers choose Eddie's Travel for personal, small-group tours across the Scottish Highlands and islands."
+      canonical="https://eddiestravel.lovable.app/about"
     />
     {/* Hero */}
     <section className="relative py-20 sm:py-28 min-h-[280px] sm:min-h-[340px] flex items-center">

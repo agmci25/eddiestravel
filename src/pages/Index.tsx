@@ -36,6 +36,7 @@ const Index = () => {
       <SEO
         title="Eddie's Travel Scotland | Small-Group Tours & Bespoke Scottish Experiences"
         description="Explore Scotland with Eddie's Travel. Private small-group tours through the Highlands, Isle of Skye, Loch Ness, Orkney and beyond. Personal guide, luxury Mercedes transport, door-to-door service from Edinburgh."
+        canonical="https://eddiestravel.lovable.app/"
       />
       {/* Hero */}
       <section className="relative h-[85vh] min-h-[500px] flex items-center justify-center overflow-hidden">
