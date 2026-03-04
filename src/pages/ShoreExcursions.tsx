@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Anchor, MapPin, Car, Droplets, UserCheck } from "lucide-react";
-import parallaxImage from "@/assets/parallax-scotland.jpg";
+import shoreHero from "@/assets/shore-excursions-hero.jpg";
 
 const ports = [
   {
@@ -36,19 +36,21 @@ const ShoreExcursions = () => {
       />
 
       {/* Hero */}
-      <section
-        className="parallax-section py-20 sm:py-28 min-h-[280px] sm:min-h-[340px] flex items-center"
-        style={{ backgroundImage: `url(${parallaxImage})` }}
-      >
-        <div className="parallax-overlay" />
-        <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
-          <p className="text-primary-foreground/80 font-body text-sm uppercase tracking-[0.3em] mb-4">
+      <section className="relative py-20 sm:py-28 min-h-[280px] sm:min-h-[340px] flex items-center">
+        <img
+          src={shoreHero}
+          alt="Colourful Scottish waterfront harbour town"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-foreground/60" />
+        <div className="container-narrow mx-auto text-center relative z-10">
+          <p className="text-white/80 font-body text-sm uppercase tracking-[0.3em] mb-4">
             Private Tours from Your Cruise Port
           </p>
-          <h1 className="font-heading text-4xl sm:text-5xl font-bold text-primary-foreground mb-4">
+          <h1 className="font-heading text-4xl sm:text-5xl font-bold text-white mb-4">
             <span className="text-primary">Shore</span> Excursions
           </h1>
-          <p className="text-primary-foreground/80 text-lg max-w-xl mx-auto">
+          <p className="text-white/80 text-lg max-w-xl mx-auto">
             Step off the ship and into the real Scotland — private tours from Edinburgh, Glasgow and Dundee.
           </p>
         </div>
