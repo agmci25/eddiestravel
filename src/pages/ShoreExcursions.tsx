@@ -36,7 +36,7 @@ const ShoreExcursions = () => {
       />
 
       {/* Hero */}
-      <section className="relative aspect-[53/31] flex items-center">
+      <section className="relative aspect-[31/53] sm:aspect-auto sm:py-28 sm:min-h-[340px] flex items-center">
         <img
           src={shoreHero}
           alt="Colourful Scottish waterfront harbour town"
