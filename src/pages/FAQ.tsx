@@ -37,7 +37,29 @@ const faqsByCategory: Record<string, { q: string; a: React.ReactNode }[]> = {
     },
     {
       q: "What's included in the tour price?",
-      a: "All tours include transport in a premium Mercedes minivan, a professional driver-guide (Eddie), complimentary bottled Scottish water and flexible photo stops. Accommodation, entrance fees, ferries, trains, flights and meals are generally not included unless stated.",
+      a: (
+        <div className="space-y-4">
+          <div>
+            <span className="font-semibold text-foreground block mb-1">✓ Included</span>
+            <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Transport in a premium Mercedes minivan</li>
+              <li>Professional driver-guide (Eddie)</li>
+              <li>Complimentary bottled Scottish water</li>
+              <li>Flexible photo stops</li>
+            </ul>
+          </div>
+          <div>
+            <span className="font-semibold text-foreground block mb-1">✗ Not included</span>
+            <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Accommodation</li>
+              <li>Entrance fees</li>
+              <li>Ferries, trains &amp; flights</li>
+              <li>Meals</li>
+            </ul>
+          </div>
+          <p className="text-muted-foreground text-xs italic">Unless otherwise stated on a specific tour.</p>
+        </div>
+      ),
     },
   ],
   booking: [
