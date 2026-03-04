@@ -2,7 +2,7 @@ import { useState } from "react";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
-import { User, Calendar, Sparkles, Compass, Star, Wifi, Car, Droplets, UserCheck } from "lucide-react";
+import { User, Calendar, Sparkles, Compass, Star, MapPin, Car, Droplets, UserCheck } from "lucide-react";
 import parallaxImage from "@/assets/parallax-scotland.jpg";
 
 const testimonials = [
@@ -29,7 +29,7 @@ const testimonials = [
 
 
 const inclusions = [
-{ icon: Wifi, label: "Onboard WiFi" },
+{ icon: MapPin, label: "Hotel Pick-up & Drop-off" },
 { icon: Car, label: "Premium Mercedes Minivan" },
 { icon: Droplets, label: "Bottled Scottish Water" },
 { icon: UserCheck, label: "Expert Tour Guide" }];
