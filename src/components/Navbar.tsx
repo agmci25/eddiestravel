@@ -6,6 +6,7 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/curated-tours", label: "Curated Tours" },
   { to: "/bespoke-tours", label: "Bespoke Tours" },
+  { to: "/shore-excursions", label: "Shore Excursions" },
   { to: "/about", label: "About" },
   { to: "/faq", label: "FAQs" },
   { to: "/blog", label: "Blog" },
