@@ -79,15 +79,15 @@ const Index = () => {
         <div className="container-narrow mx-auto">
           <div className="text-center mb-14">
             <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
-              Why Travel with <span className="text-primary">Eddie</span>?
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Every tour is a personal journey — not a production line. Here's what sets Eddie's Travel apart from the rest.
-            </p>
+            Why Travel with <span className="text-primary">Us</span>?
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Every tour is a personal journey — not a production line. Here's what sets us apart from the rest.
+          </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: MapPin, title: "Local Expertise", desc: "Born and raised in Scotland, Eddie shares stories and secrets you won't find in any guidebook." },
+              { icon: MapPin, title: "Local Expertise", desc: "Born and raised in Scotland, we share stories and secrets you won't find in any guidebook." },
               { icon: Shield, title: "Small Groups", desc: "Maximum 6 guests per tour means personal attention, flexible stops and a relaxed pace." },
               { icon: Heart, title: "Bespoke Itineraries", desc: "From a single day to a fortnight, every itinerary is crafted around your interests and pace.", link: "/bespoke-tours" },
               { icon: Star, title: "Premium Comfort", desc: "Travel in a luxury Mercedes minivan with complimentary water and door-to-door pick-up." },
@@ -232,7 +232,7 @@ const Index = () => {
             Ready to Explore Scotland?
           </h2>
           <p className="text-primary-foreground/80 max-w-xl mx-auto mb-8">
-            Whether you have a single day or a fortnight to spare, Eddie will craft an itinerary tailored to your unique preferences.
+            Whether you have a single day or a fortnight to spare, we'll craft an itinerary tailored to your unique preferences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

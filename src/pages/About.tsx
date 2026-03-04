@@ -92,13 +92,13 @@ const About = () => (
           Let's Start Your Scottish Adventure
         </h2>
         <p className="text-primary-foreground/80 max-w-xl mx-auto mb-8">
-          I'd love to hear from you. Whether you have questions or you're ready to book, get in touch and let's plan something unforgettable.
+          We'd love to hear from you. Whether you have questions or you're ready to book, get in touch and let's plan something unforgettable.
         </p>
         <Link
           to="/contact"
           className="inline-flex items-center px-8 py-3 rounded-md bg-accent text-accent-foreground font-semibold text-sm hover:bg-gold-hover transition-colors"
         >
-          Contact Eddie
+          Contact Us
         </Link>
       </div>
     </section>

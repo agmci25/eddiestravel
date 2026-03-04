@@ -14,7 +14,7 @@ const Contact = () => {
     email: "",
     subject: tourName ? `Booking Enquiry — ${tourName}` : "",
     message: tourName
-      ? `Hi Eddie,\n\nI'd like to book the "${tourName}" tour.\n\nPreferred date(s): \nNumber of guests: \n\nPlease let me know availability and any other details.\n\nThank you!`
+      ? `Hi,\n\nI'd like to book the "${tourName}" tour.\n\nPreferred date(s): \nNumber of guests: \n\nPlease let me know availability and any other details.\n\nThank you!`
       : "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -98,7 +98,7 @@ const Contact = () => {
                 href="mailto:eddiestravel@outlook.com?subject=Tour%20Booking%20Enquiry"
                 className="inline-flex items-center gap-2 px-5 py-2 rounded-md bg-accent text-accent-foreground text-sm font-medium hover:bg-gold-hover transition-colors"
               >
-                <Send size={14} /> Email Eddie
+                <Send size={14} /> Email Us
               </a>
             </div>
           </div>
@@ -110,7 +110,7 @@ const Contact = () => {
                 <Mail size={48} className="mx-auto text-primary mb-4" />
                 <h3 className="font-heading text-2xl font-bold mb-2">Message Sent!</h3>
                 <p className="text-muted-foreground">
-                  Thank you for reaching out. Eddie will reply within 24 hours.
+                  Thank you for reaching out. We'll reply within 24 hours.
                 </p>
               </div>
             ) : (

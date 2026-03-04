@@ -41,7 +41,7 @@ const Blog = () => {
     <Layout>
       <SEO
         title="Scottish Travel Blog | Tips, Stories & Hidden Gems | Eddie's Travel"
-        description="Read Eddie's latest Scottish travel articles — insider tips, hidden gems, local events and destination guides to help you plan the perfect Scotland trip."
+        description="Read our latest Scottish travel articles — insider tips, hidden gems, local events and destination guides to help you plan the perfect Scotland trip."
         canonical="https://eddiestravel.lovable.app/blog"
       />
 
@@ -58,7 +58,7 @@ const Blog = () => {
             Scottish <span className="text-primary">Travel</span> Blog
           </h1>
           <p className="text-white/80 max-w-2xl mx-auto text-lg">
-            Insider tips, hidden gems and stories from the road — straight from your guide Eddie.
+            Insider tips, hidden gems and stories from the road — straight from your guides.
           </p>
         </div>
       </section>
