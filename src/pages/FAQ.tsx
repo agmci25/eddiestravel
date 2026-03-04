@@ -43,7 +43,7 @@ const faqsByCategory: Record<string, { q: string; a: React.ReactNode }[]> = {
             <span className="font-semibold text-foreground block mb-1">✓ Included</span>
             <ul className="list-disc list-inside space-y-1 text-muted-foreground">
               <li>Transport in a premium Mercedes minivan</li>
-              <li>Professional driver-guide (Eddie)</li>
+              <li>Professional driver-guide</li>
               <li>Complimentary bottled Scottish water</li>
               <li>Flexible photo stops</li>
             </ul>
