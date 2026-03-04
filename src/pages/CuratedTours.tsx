@@ -15,7 +15,7 @@ const CuratedTours = () => {
     <Layout>
       <SEO
         title="Curated Scotland Tours | Day Trips & Multi-Day Highland Adventures"
-        description="Browse Eddie's hand-picked small-group Scotland tours. Day trips from Edinburgh to Glencoe, Loch Ness and Stirling, plus multi-day adventures to Skye, Orkney, Islay and the Outer Hebrides."
+        description="Browse our hand-picked small-group Scotland tours. Day trips from Edinburgh to Glencoe, Loch Ness and Stirling, plus multi-day adventures to Skye, Orkney, Islay and the Outer Hebrides."
         canonical="https://eddiestravel.lovable.app/curated-tours"
       />
       {/* Header */}

@@ -15,25 +15,25 @@ const faqsByCategory: Record<string, { q: string; a: React.ReactNode }[]> = {
   planning: [
     {
       q: "When is the best time to visit Scotland?",
-      a: "Scotland is beautiful year-round. May to September offers the longest daylight hours and mildest weather, making it ideal for outdoor exploration. Autumn brings dramatic colours, and winter has a magical, moody atmosphere with fewer tourists. Eddie runs tours in every season.",
+      a: "Scotland is beautiful year-round. May to September offers the longest daylight hours and mildest weather, making it ideal for outdoor exploration. Autumn brings dramatic colours, and winter has a magical, moody atmosphere with fewer tourists. We run tours in every season.",
     },
     {
       q: "What about midges?",
-      a: "Midges are small biting insects found in the Highlands, mainly from late May to September. They're most active at dawn and dusk in still, damp conditions. Eddie carries insect repellent on all tours, and keeping moving (which you will be!) helps avoid them.",
+      a: "Midges are small biting insects found in the Highlands, mainly from late May to September. They're most active at dawn and dusk in still, damp conditions. We carry insect repellent on all tours, and keeping moving (which you will be!) helps avoid them.",
     },
     {
       q: "How many days should I allow for a Scotland tour?",
-      a: <>It depends on your interests. A single day can cover a fantastic amount — Glencoe and Loch Ness, for example. For the islands (Skye, Orkney, Lewis &amp; Harris), three to five days is ideal. Eddie can also design longer itineraries for a deeper exploration. Browse our <Link to="/curated-tours" className="text-primary hover:underline font-medium">curated tours</Link> for inspiration.</>,
+      a: <>It depends on your interests. A single day can cover a fantastic amount — Glencoe and Loch Ness, for example. For the islands (Skye, Orkney, Lewis &amp; Harris), three to five days is ideal. We can also design longer itineraries for a deeper exploration. Browse our <Link to="/curated-tours" className="text-primary hover:underline font-medium">curated tours</Link> for inspiration.</>,
     },
   ],
   "tour-details": [
     {
       q: "How many people are in each tour group?",
-      a: "Eddie's tours are genuinely small-group: a maximum of 6 guests on day tours (Mercedes V-Class) and 8 guests on multi-day tours (Mercedes Vito Tourer). This means personal attention, flexible stops and a relaxed pace.",
+      a: "Our tours are genuinely small-group: a maximum of 6 guests on day tours (Mercedes V-Class) and 8 guests on multi-day tours (Mercedes Vito Tourer). This means personal attention, flexible stops and a relaxed pace.",
     },
     {
       q: "Do you provide pick-up and drop-off?",
-      a: <>Yes! Complimentary door-to-door pick-up and drop-off is included for most central Edinburgh hotels and other convenient meeting points. Just let Eddie know where you're staying when you <Link to="/contact" className="text-primary hover:underline font-medium">book</Link>.</>,
+      a: <>Yes! Complimentary door-to-door pick-up and drop-off is included for most central Edinburgh hotels and other convenient meeting points. Just let us know where you're staying when you <Link to="/contact" className="text-primary hover:underline font-medium">book</Link>.</>,
     },
     {
       q: "What's included in the tour price?",
@@ -65,7 +65,7 @@ const faqsByCategory: Record<string, { q: string; a: React.ReactNode }[]> = {
   booking: [
     {
       q: "Are children welcome?",
-      a: "Absolutely! Families are welcome on all tours. Please provide ages when booking, and let Eddie know if you need a car seat — he'll arrange one for you.",
+      a: "Absolutely! Families are welcome on all tours. Please provide ages when booking, and let us know if you need a car seat — we'll arrange one for you.",
     },
     {
       q: "How far in advance should I book?",
@@ -73,11 +73,11 @@ const faqsByCategory: Record<string, { q: string; a: React.ReactNode }[]> = {
     },
     {
       q: "What is the cancellation policy?",
-      a: <>Day tours are fully refundable if cancelled more than 24 hours before departure. Multi-day tours require 7 days' notice (for 3-day tours) or 14 days' notice (for 4–5 day tours) for a full refund. <Link to="/contact" className="text-primary hover:underline font-medium">Contact Eddie</Link> directly for special circumstances.</>,
+      a: <>Day tours are fully refundable if cancelled more than 24 hours before departure. Multi-day tours require 7 days' notice (for 3-day tours) or 14 days' notice (for 4–5 day tours) for a full refund. <Link to="/contact" className="text-primary hover:underline font-medium">Contact us</Link> directly for special circumstances.</>,
     },
     {
       q: "Can I create a custom itinerary?",
-      a: <>Absolutely — that's one of Eddie's specialities. Visit the <Link to="/bespoke-tours" className="text-primary hover:underline font-medium">Bespoke Tours</Link> page to share your interests (castles, whisky, hiking, history, wildlife) and preferred dates, and Eddie's team will design a bespoke itinerary just for you.</>,
+      a: <>Absolutely — that's one of our specialities. Visit the <Link to="/bespoke-tours" className="text-primary hover:underline font-medium">Bespoke Tours</Link> page to share your interests (castles, whisky, hiking, history, wildlife) and preferred dates, and we'll design a bespoke itinerary just for you.</>,
     },
   ],
 };
@@ -109,7 +109,7 @@ const FAQ = () => {
             Scotland Tour <span className="text-primary">FAQ</span>
           </h1>
           <p className="text-white/80 max-w-2xl mx-auto text-lg">
-            Everything you need to know before booking your small-group Scotland tour with Eddie.
+            Everything you need to know before booking your small-group Scotland tour with us.
           </p>
         </div>
       </section>
@@ -202,13 +202,13 @@ const FAQ = () => {
             <MessageCircle className="w-8 h-8 text-primary mx-auto mb-4" />
             <h3 className="text-xl font-bold mb-2">Still have questions?</h3>
             <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-              Eddie is always happy to chat — drop him a message and he'll get back to you personally.
+              We're always happy to chat — drop us a message and we'll get back to you personally.
             </p>
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-3 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors shadow-md"
             >
-              Contact Eddie
+              Contact Us
             </Link>
           </div>
         </div>
