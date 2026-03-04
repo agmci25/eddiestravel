@@ -43,7 +43,7 @@ const ShoreExcursions = () => {
         <div className="parallax-overlay" />
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
           <p className="text-primary-foreground/80 font-body text-sm uppercase tracking-[0.3em] mb-4">
-            Cruise Ship Tours
+            Private Tours from Your Cruise Port
           </p>
           <h1 className="font-heading text-4xl sm:text-5xl font-bold text-primary-foreground mb-4">
             <span className="text-primary">Shore</span> Excursions
