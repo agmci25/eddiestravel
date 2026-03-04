@@ -194,7 +194,7 @@ const CuratedTours = () => {
               {[
               "Door-to-door pick-up & drop-off",
               "Premium Mercedes minivan transport",
-              "Expert driver-guide (Eddie!)",
+              "Professional driver-guide",
               "Complimentary bottled Scottish water",
               "Flexible photo stops",
               "Personalised small-group attention"].
