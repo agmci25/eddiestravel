@@ -2,8 +2,19 @@ import { useState } from "react";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
-import { User, Calendar, Sparkles, Compass, Star, MapPin, Car, Droplets, UserCheck } from "lucide-react";
+import { User, Calendar, Sparkles, Compass, Star, MapPin, Car, Droplets, UserCheck, Users } from "lucide-react";
 import parallaxImage from "@/assets/parallax-scotland.jpg";
+import minibus1 from "@/assets/minibus-1.jpg";
+import minibus2 from "@/assets/minibus-2.jpg";
+import minibus3 from "@/assets/minibus-3.jpg";
+import minibus4 from "@/assets/minibus-4.jpg";
+
+const minibusImages = [
+  { src: minibus1, alt: "16-seat Mercedes minibus at a Scottish loch" },
+  { src: minibus2, alt: "16-seat Mercedes minibus in Glencoe" },
+  { src: minibus3, alt: "16-seat Mercedes minibus in the Scottish Highlands" },
+  { src: minibus4, alt: "16-seat Mercedes minibus side view" },
+];
 
 const testimonials = [
 {
@@ -293,6 +304,43 @@ const BespokeTours = () => {
               </button>
             </form>
           }
+        </div>
+      </section>
+
+      {/* Larger Groups */}
+      <section className="section-padding">
+        <div className="container-narrow mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-4">
+              <Users size={26} />
+            </div>
+            <h2 className="font-heading text-3xl font-bold mb-4">
+              Need a <span className="text-primary">Larger Vehicle</span>?
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              For groups of 7–16 passengers, we also have access to a premium 16-seat Mercedes minibus — perfect for larger families, corporate groups or friends travelling together. Please contact us for a tailored quote.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+            {minibusImages.map((img, idx) => (
+              <div key={idx} className="overflow-hidden rounded-lg">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center px-8 py-3 rounded-md bg-accent text-accent-foreground font-semibold text-sm hover:bg-gold-hover transition-colors"
+            >
+              Get a Quote for Larger Groups
+            </Link>
+          </div>
         </div>
       </section>
 
