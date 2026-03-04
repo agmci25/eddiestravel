@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Facebook, Instagram, MessageCircle } from "lucide-react";
 
 const Footer = () => (
   <footer className="bg-foreground text-background">
@@ -44,8 +44,8 @@ const Footer = () => (
             <a href="https://www.instagram.com/eddiestravelltd/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-background/60 hover:text-primary transition-colors">
               <Instagram size={20} />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X" className="text-background/60 hover:text-primary transition-colors">
-              <Twitter size={20} />
+            <a href="https://wa.me/4407412598775" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-background/60 hover:text-primary transition-colors">
+              <MessageCircle size={20} />
             </a>
           </div>
         </div>
