@@ -80,6 +80,15 @@ const CuratedTours = () => {
                     >
                       Book This Tour
                     </button>
+                  ) : tour.slug === "private-loch-ness-highlands" ? (
+                    <button
+                      className="bokunButton inline-flex items-center px-6 py-2.5 rounded-md bg-accent text-accent-foreground font-medium text-sm hover:bg-gold-hover transition-colors border-none cursor-pointer"
+                      id="bokun_b46417ef_f7bf_4c06_b270_cccb5912e6bf"
+                      data-src="https://widgets.bokun.io/online-sales/8b956080-fe7f-4205-be74-066b84ab2ed2/experience/752742?partialView=1"
+                      data-testid="widget-book-button"
+                    >
+                      Book This Tour
+                    </button>
                   ) : (
                     <Link
                       to={`/contact?tour=${encodeURIComponent(tour.title)}`}
