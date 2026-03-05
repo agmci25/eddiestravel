@@ -71,12 +71,23 @@ const CuratedTours = () => {
                       </li>
                   )}
                   </ul>
-                  <Link
-                  to={`/contact?tour=${encodeURIComponent(tour.title)}`}
-                  className="inline-flex items-center px-6 py-2.5 rounded-md bg-accent text-accent-foreground font-medium text-sm hover:bg-gold-hover transition-colors">
-
-                    Book This Tour
-                  </Link>
+                  {tour.slug === "loch-lomond-stirling-kelpies" ? (
+                    <button
+                      className="bokunButton inline-flex items-center px-6 py-2.5 rounded-md bg-accent text-accent-foreground font-medium text-sm hover:bg-gold-hover transition-colors border-none cursor-pointer"
+                      id="bokun_b7f4e164_9c5b_4fc5_9a42_4112edd5a48b"
+                      data-src="https://widgets.bokun.io/online-sales/8b956080-fe7f-4205-be74-066b84ab2ed2/experience/825987?partialView=1"
+                      data-testid="widget-book-button"
+                    >
+                      Book This Tour
+                    </button>
+                  ) : (
+                    <Link
+                      to={`/contact?tour=${encodeURIComponent(tour.title)}`}
+                      className="inline-flex items-center px-6 py-2.5 rounded-md bg-accent text-accent-foreground font-medium text-sm hover:bg-gold-hover transition-colors"
+                    >
+                      Book This Tour
+                    </Link>
+                  )}
                 </div>
               </article>
             )}
