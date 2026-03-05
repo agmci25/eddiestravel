@@ -49,11 +49,11 @@ export const tours: Tour[] = [
     shortDescription:
       "Explore the Scottish Highlands in a private vehicle on this full-day experience. Enjoy the most beautiful Highland scenery, hear the history of the Glencoe massacre, discover the mystery of Loch Ness monster \"Nessie\", the Kelpies and the Unicorn. Travel the stunning west Highlands route A82 and customise the itinerary to suit yourself.",
     highlights: [
-      "Pass of Glencoe & massacre history",
-      "Loch Ness & the story of Nessie",
-      "The Kelpies & the Unicorn",
-      "West Highlands route A82",
-      "Flexible, customisable itinerary",
+      "Stirling",
+      "Scottish Highlands & Glencoe",
+      "Fort William",
+      "Drumnadrochit & Loch Ness",
+      "Pitlochry",
     ],
     type: "day",
   },
