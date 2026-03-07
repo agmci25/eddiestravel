@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const SITE_URL = "https://eddiestravel.lovable.app";
 const SITE_NAME = "Eddie's Travel Scotland";
-const DEFAULT_OG_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6cfe1839-77f6-48ad-bcc5-53b1677b6552/id-preview-b006c207--71a8cb83-d0c4-4a54-a3d0-38ecfe098b8e.lovable.app-1771247806058.png";
+const DEFAULT_OG_IMAGE = "https://eddiestravel.lovable.app/og-image.png";
 
 interface SEOProps {
   title: string;
