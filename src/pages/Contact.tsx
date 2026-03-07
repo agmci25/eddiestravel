@@ -192,9 +192,11 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-8 py-3 rounded-md bg-accent text-accent-foreground font-semibold text-sm hover:bg-gold-hover transition-colors"
+                  disabled={loading}
+                  className="w-full sm:w-auto px-8 py-3 rounded-md bg-accent text-accent-foreground font-semibold text-sm hover:bg-gold-hover transition-colors disabled:opacity-50"
                 >
-                  Send Message
+                  {loading ? <Loader2 className="animate-spin inline mr-2" size={16} /> : null}
+                  {loading ? "Sending…" : "Send Message"}
                 </button>
               </form>
             )}
