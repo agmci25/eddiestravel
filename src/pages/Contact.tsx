@@ -3,9 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import contactHero from "@/assets/contact-hero.jpg";
-import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "sonner";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 const Contact = () => {
   const [searchParams] = useSearchParams();
@@ -13,43 +11,17 @@ const Contact = () => {
 
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
     subject: tourName ? `Booking Enquiry — ${tourName}` : "",
     message: tourName
       ? `Hi,\n\nI'd like to book the "${tourName}" tour.\n\nPreferred date(s): \nNumber of guests: \n\nPlease let me know availability and any other details.\n\nThank you!`
       : "",
   });
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-    try {
-      const { error } = await supabase.from("contact_submissions").insert({
-        name: formData.name,
-        email: formData.email,
-        subject: formData.subject || null,
-        message: formData.message,
-      });
-      if (error) throw error;
-
-      // Also trigger email notification via edge function
-      try {
-        await supabase.functions.invoke("send-contact-email", {
-          body: formData,
-        });
-      } catch {
-        // Email notification is best-effort; submission is already saved
-      }
-
-      setSubmitted(true);
-    } catch (err) {
-      console.error("Contact form error:", err);
-      toast.error("Something went wrong. Please try again or email us directly.");
-    } finally {
-      setLoading(false);
-    }
+    const subject = encodeURIComponent(formData.subject || `Enquiry from ${formData.name}`);
+    const body = encodeURIComponent(`${formData.message}\n\n— ${formData.name}`);
+    window.location.href = `mailto:eddiestravel@outlook.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -133,39 +105,17 @@ const Contact = () => {
 
           {/* Form */}
           <div className="lg:col-span-2">
-            {submitted ? (
-              <div className="text-center py-16 bg-section-alt rounded-lg border border-border">
-                <Mail size={48} className="mx-auto text-primary mb-4" />
-                <h3 className="font-heading text-2xl font-bold mb-2">Message Sent!</h3>
-                <p className="text-muted-foreground">
-                  Thank you for reaching out. We'll reply within 24 hours.
-                </p>
-              </div>
-            ) : (
               <form onSubmit={handleSubmit} className="bg-card rounded-lg border border-border p-8 space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium mb-1.5">Full Name *</label>
-                    <input
-                      type="text"
-                      required
-                      maxLength={100}
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-1.5">Email *</label>
-                    <input
-                      type="email"
-                      required
-                      maxLength={255}
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                    />
-                  </div>
+                <div>
+                  <label className="block text-sm font-medium mb-1.5">Full Name *</label>
+                  <input
+                    type="text"
+                    required
+                    maxLength={100}
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-1.5">Subject</label>
@@ -192,14 +142,11 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  disabled={loading}
-                  className="w-full sm:w-auto px-8 py-3 rounded-md bg-accent text-accent-foreground font-semibold text-sm hover:bg-gold-hover transition-colors disabled:opacity-50"
+                  className="w-full sm:w-auto px-8 py-3 rounded-md bg-accent text-accent-foreground font-semibold text-sm hover:bg-gold-hover transition-colors"
                 >
-                  {loading ? <Loader2 className="animate-spin inline mr-2" size={16} /> : null}
-                  {loading ? "Sending…" : "Send Message"}
+                  Send Message
                 </button>
               </form>
-            )}
           </div>
         </div>
       </section>
