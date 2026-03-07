@@ -105,39 +105,17 @@ const Contact = () => {
 
           {/* Form */}
           <div className="lg:col-span-2">
-            {submitted ? (
-              <div className="text-center py-16 bg-section-alt rounded-lg border border-border">
-                <Mail size={48} className="mx-auto text-primary mb-4" />
-                <h3 className="font-heading text-2xl font-bold mb-2">Message Sent!</h3>
-                <p className="text-muted-foreground">
-                  Thank you for reaching out. We'll reply within 24 hours.
-                </p>
-              </div>
-            ) : (
               <form onSubmit={handleSubmit} className="bg-card rounded-lg border border-border p-8 space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium mb-1.5">Full Name *</label>
-                    <input
-                      type="text"
-                      required
-                      maxLength={100}
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-1.5">Email *</label>
-                    <input
-                      type="email"
-                      required
-                      maxLength={255}
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                    />
-                  </div>
+                <div>
+                  <label className="block text-sm font-medium mb-1.5">Full Name *</label>
+                  <input
+                    type="text"
+                    required
+                    maxLength={100}
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-1.5">Subject</label>
@@ -164,14 +142,11 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  disabled={loading}
-                  className="w-full sm:w-auto px-8 py-3 rounded-md bg-accent text-accent-foreground font-semibold text-sm hover:bg-gold-hover transition-colors disabled:opacity-50"
+                  className="w-full sm:w-auto px-8 py-3 rounded-md bg-accent text-accent-foreground font-semibold text-sm hover:bg-gold-hover transition-colors"
                 >
-                  {loading ? <Loader2 className="animate-spin inline mr-2" size={16} /> : null}
-                  {loading ? "Sending…" : "Send Message"}
+                  Send Message
                 </button>
               </form>
-            )}
           </div>
         </div>
       </section>
