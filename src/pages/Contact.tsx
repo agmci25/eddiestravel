@@ -11,43 +11,17 @@ const Contact = () => {
 
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
     subject: tourName ? `Booking Enquiry — ${tourName}` : "",
     message: tourName
       ? `Hi,\n\nI'd like to book the "${tourName}" tour.\n\nPreferred date(s): \nNumber of guests: \n\nPlease let me know availability and any other details.\n\nThank you!`
       : "",
   });
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-    try {
-      const { error } = await supabase.from("contact_submissions").insert({
-        name: formData.name,
-        email: formData.email,
-        subject: formData.subject || null,
-        message: formData.message,
-      });
-      if (error) throw error;
-
-      // Also trigger email notification via edge function
-      try {
-        await supabase.functions.invoke("send-contact-email", {
-          body: formData,
-        });
-      } catch {
-        // Email notification is best-effort; submission is already saved
-      }
-
-      setSubmitted(true);
-    } catch (err) {
-      console.error("Contact form error:", err);
-      toast.error("Something went wrong. Please try again or email us directly.");
-    } finally {
-      setLoading(false);
-    }
+    const subject = encodeURIComponent(formData.subject || `Enquiry from ${formData.name}`);
+    const body = encodeURIComponent(`${formData.message}\n\n— ${formData.name}`);
+    window.location.href = `mailto:eddiestravel@outlook.com?subject=${subject}&body=${body}`;
   };
 
   return (
