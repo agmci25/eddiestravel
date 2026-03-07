@@ -3,7 +3,9 @@ import { useSearchParams } from "react-router-dom";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import contactHero from "@/assets/contact-hero.jpg";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const Contact = () => {
   const [searchParams] = useSearchParams();
@@ -18,10 +20,36 @@ const Contact = () => {
       : "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    try {
+      const { error } = await supabase.from("contact_submissions").insert({
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject || null,
+        message: formData.message,
+      });
+      if (error) throw error;
+
+      // Also trigger email notification via edge function
+      try {
+        await supabase.functions.invoke("send-contact-email", {
+          body: formData,
+        });
+      } catch {
+        // Email notification is best-effort; submission is already saved
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Contact form error:", err);
+      toast.error("Something went wrong. Please try again or email us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -164,9 +192,11 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-8 py-3 rounded-md bg-accent text-accent-foreground font-semibold text-sm hover:bg-gold-hover transition-colors"
+                  disabled={loading}
+                  className="w-full sm:w-auto px-8 py-3 rounded-md bg-accent text-accent-foreground font-semibold text-sm hover:bg-gold-hover transition-colors disabled:opacity-50"
                 >
-                  Send Message
+                  {loading ? <Loader2 className="animate-spin inline mr-2" size={16} /> : null}
+                  {loading ? "Sending…" : "Send Message"}
                 </button>
               </form>
             )}
