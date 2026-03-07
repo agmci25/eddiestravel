@@ -21,8 +21,8 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border">
       <nav className="container-narrow mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
-        <Link to="/" className="font-heading text-xl font-bold tracking-tight text-foreground">
-          Eddie's <span className="text-primary">Travel</span>
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logo} alt="Eddie's Travel Scotland" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop */}
