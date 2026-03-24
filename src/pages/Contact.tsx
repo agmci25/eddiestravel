@@ -83,7 +83,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm font-medium mb-1">Address</p>
-                    <p className="text-sm text-muted-foreground">1-3 Waterloo Place, Edinburgh, EH1 3BG</p>
+                    <p className="text-sm text-muted-foreground">197 King Street, Aberdeen, Scotland, AB24 5AH</p>
                   </div>
                 </div>
               </div>
