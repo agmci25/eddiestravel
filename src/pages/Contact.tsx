@@ -61,8 +61,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm font-medium mb-1">Email</p>
-                    <a href="mailto:info@eddiestravel.co.uk" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                      info@eddiestravel.co.uk
+                    <a href="mailto:eddiestravel@outlook.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                      eddiestravel@outlook.com
                     </a>
                   </div>
                 </div>
@@ -83,7 +83,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm font-medium mb-1">Address</p>
-                    <p className="text-sm text-muted-foreground">1-3 Waterloo Place, Edinburgh, EH1 3BG</p>
+                    <p className="text-sm text-muted-foreground">197 King Street, Aberdeen, Scotland, AB24 5AH</p>
                   </div>
                 </div>
               </div>
@@ -95,7 +95,7 @@ const Contact = () => {
                 For the fastest response, email us directly with your preferred dates and tour choice.
               </p>
               <a
-                href="mailto:info@eddiestravel.co.uk?subject=Tour%20Booking%20Enquiry"
+                href="mailto:eddiestravel@outlook.com?subject=Tour%20Booking%20Enquiry"
                 className="inline-flex items-center gap-2 px-5 py-2 rounded-md bg-accent text-accent-foreground text-sm font-medium hover:bg-gold-hover transition-colors"
               >
                 <Send size={14} /> Email Us
