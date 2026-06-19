@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Clock, CheckCircle, Flag, Car } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { golfTours, golfTransferServices } from "@/data/golfTours";
-import golfHero from "@/assets/golf-hero-st-andrews.png.asset.json";
+const golfHero = "/images/golf-hero-st-andrews.png";
 
 const GolfTours = () => {
   return (
@@ -19,7 +19,7 @@ const GolfTours = () => {
       <section className="relative bg-section-alt overflow-hidden min-h-[280px] sm:min-h-[340px] flex items-center">
         <div className="absolute inset-0">
           <img
-            src={golfHero.url}
+            src={golfHero}
             alt="The Old Course at St Andrews at sunset"
             className="w-full h-full object-cover"
             loading="eager"

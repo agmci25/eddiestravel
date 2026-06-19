@@ -1,5 +1,3 @@
-import stAndrewsPilgrimage from "@/assets/st-andrews-pilgrimage.png.asset.json";
-
 export interface GolfTour {
   slug: string;
   title: string;
@@ -15,7 +13,7 @@ export const golfTours: GolfTour[] = [
     slug: "st-andrews-golf-pilgrimage",
     title: "St Andrews Golf Pilgrimage",
     duration: "1 Day",
-    image: stAndrewsPilgrimage.url,
+    image: "/images/st-andrews-pilgrimage.png",
     description:
       "Experience the Home of Golf by spending a full day exploring St Andrews. Walk in the footsteps of golfing legends, take in the famous Old Course, visit iconic golfing landmarks and enjoy the charm of this historic medieval town.",
     highlights: [
