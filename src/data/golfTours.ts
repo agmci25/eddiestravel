@@ -119,7 +119,7 @@ export const golfTransferServices: GolfTransferService[] = [
       "Professional local drivers",
       "Meet-and-greet service available",
     ],
-    image: "/placeholder.svg",
+    image: "/images/vip-golf-transfer.webp",
   },
   {
     slug: "open-championship-transport",
