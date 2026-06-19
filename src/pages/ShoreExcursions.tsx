@@ -95,7 +95,7 @@ const ShoreExcursions = () => {
               We offer shore excursions from three of Scotland's most popular cruise ports.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {ports.map((port) => (
               <div
                 key={port.name}
