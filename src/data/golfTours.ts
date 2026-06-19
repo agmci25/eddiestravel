@@ -15,7 +15,7 @@ export const golfTours: GolfTour[] = [
     duration: "1 Day",
     image: "/placeholder.svg",
     description:
-      "Experience the Home of Golf by spending a full day exploring St Andrews. Walk in the footsteps of golfing greats, take in the famous Old Course, visit iconic golfing landmarks and enjoy the charm of this historic medieval town.",
+      "Experience the Home of Golf by spending a full day exploring St Andrews. Walk in the footsteps of golfing legends, take in the famous Old Course, visit iconic golfing landmarks and enjoy the charm of this historic medieval town.",
     highlights: [
       "Visit the legendary Old Course",
       "Walk across the Swilcan Bridge",
