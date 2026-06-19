@@ -20,7 +20,7 @@ export const golfTours: GolfTour[] = [
       "Visit the legendary Old Course",
       "Walk across the Swilcan Bridge",
       "Explore St Andrews town and university",
-      "Visit the British Golf Museum (optional)",
+      "Visit the British Golf Museum (Optional)",
       "Luxury executive transport",
       "Flexible itinerary tailored to your interests",
     ],
@@ -49,7 +49,7 @@ export const golfTours: GolfTour[] = [
     duration: "2–3 Days",
     image: "/placeholder.svg",
     description:
-      "Explore some of Scotland's finest links courses spanning the east coast — from renowned championship venues to obscure hidden gems. Enjoy great golf, beautiful coastal landscapes, quality accommodation and a taste of authentic Scottish charm.",
+      "Explore some of Scotland's finest links courses spanning the east coast; from renowned championship venues to obscure hidden gems. Enjoy great golf, beautiful coastal landscapes, quality accommodation and a taste of authentic Scottish charm.",
     highlights: [
       "St Andrews and surrounding championship courses",
       "Scenic coastal touring",
@@ -66,7 +66,7 @@ export const golfTours: GolfTour[] = [
     duration: "3 Days",
     image: "/placeholder.svg",
     description:
-      "Combine Scotland's legendary golf courses with its world-famous whisky heritage by enjoying unforgettable rounds of golf, exploring renowned distilleries, enjoying private whisky tasting and uncovering the rich story behind Scotland's national drink.",
+      "Combine Scotland's remarkable golf courses with its world-famous whisky heritage by enjoying unforgettable rounds of golf, exploring renowned distilleries, enjoying private whisky tasting and uncovering the rich story behind Scotland's national drink.",
     highlights: [
       "Golf at selected championship and links courses",
       "Distillery tours and whisky tastings",
@@ -83,7 +83,7 @@ export const golfTours: GolfTour[] = [
     duration: "5 Days",
     image: "/placeholder.svg",
     description:
-      "Discover the best of Scotland through a mix of exceptional golf, historic castles, breathtaking Highland scenery and unique cultural experiences in a multi-day adventure that takes you to some of the country's most memorable destinations.",
+      "Discover the best of Scotland through a mix of exceptional golf, historic castles, breath-taking Highland scenery and unique cultural experiences in a multi-day adventure that takes you to some of the country's most scenic destinations.",
     highlights: [
       "Championship golf courses",
       "Historic castles and landmarks",
