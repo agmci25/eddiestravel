@@ -173,7 +173,7 @@ const GolfTours = () => {
             Plan Your <span className="text-primary">Golf Trip</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-8">
-            Every golf itinerary is built around your preferred courses, group size and schedule. Get in touch and we'll put together a tailored proposal.
+            Every golf itinerary is built around your preferred courses, group size and schedule. Get in touch and we'll put together a tailored plan.
           </p>
           <Link
             to="/contact"
