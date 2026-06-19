@@ -16,6 +16,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://eddiestravel.lovable.app/golf-tours</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://eddiestravel.lovable.app/shore-excursions</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://eddiestravel.lovable.app/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
