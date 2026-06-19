@@ -30,7 +30,7 @@ export const golfTours: GolfTour[] = [
     title: "St Andrews & East Neuk Luxury Tour",
     tagline: "Golf Heritage Meets Coastal Scotland",
     duration: "1 Day",
-    image: "/placeholder.svg",
+    image: "/images/east-neuk.webp",
     description:
       "Discover the history of St Andrews while exploring the beautiful fishing villages of the East Neuk of Fife. Take in the stunning coastline, explore charming harbours, enjoy exquisite local food and experience the area's famous golfing heritage all in one memorable day.",
     highlights: [
@@ -47,7 +47,7 @@ export const golfTours: GolfTour[] = [
     title: "Golf Coast of Scotland Tour",
     tagline: "Play and Discover Scotland's Legendary Golf Coast",
     duration: "2–3 Days",
-    image: "/placeholder.svg",
+    image: "/images/golf-coast.webp",
     description:
       "Explore some of Scotland's finest links courses spanning the east coast; from renowned championship venues to obscure hidden gems. Enjoy great golf, beautiful coastal landscapes, quality accommodation and a taste of authentic Scottish charm.",
     highlights: [
@@ -64,7 +64,7 @@ export const golfTours: GolfTour[] = [
     title: "Scottish Whisky & Golf Experience",
     tagline: "The Perfect Scottish Combination",
     duration: "3 Days",
-    image: "/placeholder.svg",
+    image: "/images/whisky-golf.webp",
     description:
       "Combine Scotland's remarkable golf courses with its world-famous whisky heritage by enjoying unforgettable rounds of golf, exploring renowned distilleries, enjoying private whisky tasting and uncovering the rich story behind Scotland's national drink.",
     highlights: [
@@ -81,7 +81,7 @@ export const golfTours: GolfTour[] = [
     title: "Highlands, Castles & Golf Tour",
     tagline: "A Journey Through Scotland's Greatest Landscapes",
     duration: "5 Days",
-    image: "/placeholder.svg",
+    image: "/images/highlands-golf.webp",
     description:
       "Discover the best of Scotland through a mix of exceptional golf, historic castles, breath-taking Highland scenery and unique cultural experiences in a multi-day adventure that takes you to some of the country's most scenic destinations.",
     highlights: [
