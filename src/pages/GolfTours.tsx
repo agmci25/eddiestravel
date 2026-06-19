@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Clock, CheckCircle, Flag, Car } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { golfTours, golfTransferServices } from "@/data/golfTours";
-const golfHero = "/images/golf-hero-st-andrews.png";
+const golfHero = "/images/golf-hero-st-andrews.webp";
 
 const GolfTours = () => {
   return (
