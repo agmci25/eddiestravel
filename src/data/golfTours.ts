@@ -135,6 +135,6 @@ export const golfTransferServices: GolfTransferService[] = [
       "Group transport options",
       "Professional local drivers familiar with championship venues",
     ],
-    image: "/placeholder.svg",
+    image: "/images/open-championship.webp",
   },
 ];
