@@ -15,7 +15,7 @@ export const golfTours: GolfTour[] = [
     slug: "st-andrews-golf-pilgrimage",
     title: "St Andrews Golf Pilgrimage",
     duration: "1 Day",
-    image: "/placeholder.svg",
+    image: stAndrewsPilgrimage.url,
     description:
       "Experience the Home of Golf by spending a full day exploring St Andrews. Walk in the footsteps of golfing legends, take in the famous Old Course, visit iconic golfing landmarks and enjoy the charm of this historic medieval town.",
     highlights: [
