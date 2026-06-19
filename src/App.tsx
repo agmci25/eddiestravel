@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import CuratedTours from "./pages/CuratedTours";
 import BespokeTours from "./pages/BespokeTours";
 import ShoreExcursions from "./pages/ShoreExcursions";
+import GolfTours from "./pages/GolfTours";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/curated-tours" element={<CuratedTours />} />
           <Route path="/bespoke-tours" element={<BespokeTours />} />
           <Route path="/shore-excursions" element={<ShoreExcursions />} />
+          <Route path="/golf-tours" element={<GolfTours />} />
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />

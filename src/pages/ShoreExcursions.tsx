@@ -1,13 +1,17 @@
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
-import { Anchor, MapPin, Car, Droplets, UserCheck } from "lucide-react";
+import { Anchor, MapPin, Car, Droplets, UserCheck, CheckCircle } from "lucide-react";
 import shoreHero from "@/assets/shore-excursions-hero.jpg";
 
 const ports = [
   {
     name: "Edinburgh",
     desc: "Explore the historic Royal Mile, Edinburgh Castle, Arthur's Seat, or venture out to the Scottish Highlands and beyond.",
+  },
+  {
+    name: "Rosyth",
+    desc: "Just across the Forth from Edinburgh — perfectly placed for St Andrews, Falkland, the East Neuk of Fife and Stirling Castle.",
   },
   {
     name: "Glasgow",
@@ -17,6 +21,15 @@ const ports = [
     name: "Dundee",
     desc: "Visit the stunning East Coast, St Andrews, Glamis Castle, or journey into the heart of Perthshire.",
   },
+];
+
+const popularDestinations = [
+  "St Andrews",
+  "Edinburgh and the Royal Mile",
+  "Falkland and the East Neuk of Fife",
+  "Stirling Castle",
+  "Highland scenic tours",
+  "Custom private excursions available",
 ];
 
 const inclusions = [
@@ -100,6 +113,31 @@ const ShoreExcursions = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Popular Destinations */}
+      <section className="section-padding">
+        <div className="container-narrow mx-auto max-w-4xl">
+          <div className="text-center mb-10">
+            <h2 className="font-heading text-3xl font-bold mb-4">
+              Popular <span className="text-primary">Excursion Destinations</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Exclusive Scottish experiences for cruise guests arriving into Edinburgh and Rosyth. Make the most of your time ashore with private excursions built around your schedule — explore Scotland's history, culture, golfing heritage and stunning landscapes.
+            </p>
+          </div>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {popularDestinations.map((d) => (
+              <li
+                key={d}
+                className="flex items-start gap-3 bg-section-alt rounded-md p-4"
+              >
+                <CheckCircle size={18} className="text-primary mt-0.5 shrink-0" />
+                <span className="text-sm">{d}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
