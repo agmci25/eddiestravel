@@ -1,3 +1,5 @@
+import stAndrewsPilgrimage from "@/assets/st-andrews-pilgrimage.png.asset.json";
+
 export interface GolfTour {
   slug: string;
   title: string;
