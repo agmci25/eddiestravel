@@ -54,6 +54,7 @@ export default {
         gold: "hsl(var(--gold))",
         "gold-hover": "hsl(var(--gold-hover))",
         "section-alt": "hsl(var(--section-alt))",
+        golf: "hsl(var(--golf-active))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

@@ -41,14 +41,20 @@ const GolfTours = () => {
       <section className="section-padding">
         <div className="container-narrow mx-auto">
           <Tabs defaultValue="tours" className="w-full">
-            <TabsList className="w-full sm:w-auto mx-auto flex mb-10">
-              <TabsTrigger value="tours" className="flex-1 sm:flex-none gap-2">
-                <Flag size={16} /> Golf Tours
-              </TabsTrigger>
-              <TabsTrigger value="transport" className="flex-1 sm:flex-none gap-2">
-                <Car size={16} /> VIP Transport
-              </TabsTrigger>
-            </TabsList>
+          <TabsList className="inline-flex items-center p-1 bg-white border border-stone-200/80 rounded-full shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] h-auto mx-auto mb-10 w-auto">
+            <TabsTrigger value="tours" className="flex items-center gap-3 pl-1.5 pr-6 py-1.5 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase transition-all duration-300 cursor-pointer text-stone-500 hover:bg-stone-50 hover:text-stone-800 data-[state=active]:bg-golf data-[state=active]:text-white data-[state=active]:shadow-lg data-[state=active]:shadow-golf/15 data-[state=active]:hover:bg-golf group">
+              <div className="w-9 h-9 flex items-center justify-center rounded-full bg-stone-100 text-stone-400 group-data-[state=active]:bg-white/10 group-data-[state=active]:text-white group-data-[state=active]:ring-1 group-data-[state=active]:ring-white/20 group-hover:text-stone-600 transition-colors">
+                <Flag size={18} strokeWidth={2.5} />
+              </div>
+              Golf Tours
+            </TabsTrigger>
+            <TabsTrigger value="transport" className="flex items-center gap-3 pl-1.5 pr-6 py-1.5 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase transition-all duration-300 cursor-pointer text-stone-500 hover:bg-stone-50 hover:text-stone-800 data-[state=active]:bg-golf data-[state=active]:text-white data-[state=active]:shadow-lg data-[state=active]:shadow-golf/15 data-[state=active]:hover:bg-golf group">
+              <div className="w-9 h-9 flex items-center justify-center rounded-full bg-stone-100 text-stone-400 group-data-[state=active]:bg-white/10 group-data-[state=active]:text-white group-data-[state=active]:ring-1 group-data-[state=active]:ring-white/20 group-hover:text-stone-600 transition-colors">
+                <Car size={18} strokeWidth={2} />
+              </div>
+              VIP Transport
+            </TabsTrigger>
+          </TabsList>
 
             <TabsContent value="tours" className="space-y-16">
               {golfTours.map((tour) => (
