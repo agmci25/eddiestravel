@@ -66,7 +66,7 @@ export const golfTours: GolfTour[] = [
     duration: "3 Days",
     image: "/placeholder.svg",
     description:
-      "Combine Scotland's legendary golf courses with its world-famous whisky heritage by enjoying memorable rounds of golf, exploring renowned distilleries, enjoying private tastings and uncovering the rich story behind Scotland's national drink.",
+      "Combine Scotland's legendary golf courses with its world-famous whisky heritage by enjoying unforgettable rounds of golf, exploring renowned distilleries, enjoying private whisky tasting and uncovering the rich story behind Scotland's national drink.",
     highlights: [
       "Golf at selected championship and links courses",
       "Distillery tours and whisky tastings",
