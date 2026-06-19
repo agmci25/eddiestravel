@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Clock, CheckCircle, Flag, Car } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { golfTours, golfTransferServices } from "@/data/golfTours";
+import golfHero from "@/assets/golf-hero-st-andrews.jpg.asset.json";
 
 const GolfTours = () => {
   return (
@@ -18,9 +19,14 @@ const GolfTours = () => {
       <section className="relative bg-section-alt overflow-hidden min-h-[280px] sm:min-h-[340px] flex items-center">
         <div className="absolute inset-0">
           <img
-            src="/placeholder.svg"
-            alt="Scottish links golf course at sunrise"
+            src={golfHero.url}
+            alt="The Old Course at St Andrews at sunset"
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            width={1500}
+            height={844}
           />
           <div className="absolute inset-0 bg-foreground/60" />
         </div>
